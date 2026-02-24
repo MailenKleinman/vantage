@@ -7,10 +7,29 @@
 
 
 /* ================================================================
+   Global Link & Button Color
+   ================================================================ */
+a,
+.button-link,
+.menu-link:hover,
+a.color {
+	color: #6fb7f5;
+}
+
+.button-link:hover {
+	color: #4da3e8;
+}
+
+.button:not(.button-border):not([class*="bg-"]) {
+	background-color: #6fb7f5;
+	border-color: #6fb7f5;
+}
+
+/* ================================================================
    VRG 5-Step Engagement Process
    ================================================================ */
 #vrg-process {
-	--vrg-accent: #00BED7;
+	--vrg-accent: #6fb7f5;
 }
 
 .vrg-scroll-container {
