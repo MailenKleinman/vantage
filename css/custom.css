@@ -5,3 +5,302 @@
 	Overwriting Default Theme Styles for Better Handling Updates
 -----------------------------------------------------------------*/
 
+
+/* ================================================================
+   VRG 5-Step Engagement Process
+   ================================================================ */
+#vrg-process {
+	--vrg-accent: #00BED7;
+}
+
+.vrg-scroll-container {
+	height: 500vh;
+	position: relative;
+}
+
+.vrg-sticky-viewport {
+	position: sticky;
+	top: 0;
+	height: 100vh;
+	overflow: hidden;
+	background: #ffffff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.vrg-process-inner {
+	display: flex;
+	align-items: center;
+	gap: 80px;
+	padding: 0 80px;
+	max-width: 1280px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+/* ---- Left panel ---- */
+.vrg-left-panel {
+	flex: 0 0 300px;
+}
+
+.vrg-eyebrow {
+	display: block;
+	font-family: 'Poppins', sans-serif;
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: var(--vrg-accent);
+	margin-bottom: 16px;
+}
+
+.vrg-section-title {
+	font-family: 'Poppins', sans-serif;
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 1.3;
+	color: #1a1a2e;
+	margin: 0 0 40px;
+}
+
+/* ---- Step nav ---- */
+.vrg-step-nav {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	padding-left: 0;
+	list-style: none;
+}
+
+.vrg-progress-track {
+	position: absolute;
+	left: 4px;
+	top: 14px;
+	bottom: 14px;
+	width: 2px;
+	background: #e8e8e8;
+	border-radius: 1px;
+	overflow: hidden;
+	z-index: 0;
+}
+
+.vrg-progress-fill {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0%;
+	background: var(--vrg-accent);
+	border-radius: 1px;
+	transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vrg-nav-item {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	padding: 10px 0;
+	position: relative;
+	cursor: default;
+}
+
+.vrg-nav-dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #d8d8d8;
+	flex-shrink: 0;
+	position: relative;
+	z-index: 1;
+	transition: background 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.vrg-nav-item.active .vrg-nav-dot {
+	background: var(--vrg-accent);
+	transform: scale(1.5);
+	box-shadow: 0 0 0 4px rgba(0, 190, 215, 0.15);
+}
+
+.vrg-nav-item.completed .vrg-nav-dot {
+	background: var(--vrg-accent);
+}
+
+.vrg-nav-label {
+	font-family: 'Poppins', sans-serif;
+	font-size: 13px;
+	font-weight: 500;
+	color: #bbb;
+	transition: color 0.4s ease;
+	line-height: 1;
+}
+
+.vrg-nav-item.active .vrg-nav-label {
+	color: #1a1a2e;
+	font-weight: 700;
+}
+
+.vrg-nav-item.completed .vrg-nav-label {
+	color: var(--vrg-accent);
+}
+
+/* ---- Right panel ---- */
+.vrg-right-panel {
+	flex: 1;
+	position: relative;
+	height: 380px;
+	min-height: 320px;
+}
+
+.vrg-step-counter {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-family: 'Poppins', sans-serif;
+	font-size: 12px;
+	color: #ccc;
+	letter-spacing: 1px;
+	z-index: 2;
+}
+
+.vrg-counter-current {
+	color: #1a1a2e;
+	font-weight: 700;
+}
+
+.vrg-step-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	transform: translateY(28px);
+	transition: opacity 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+				transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+	pointer-events: none;
+}
+
+.vrg-step-content.is-active {
+	opacity: 1;
+	transform: translateY(0);
+	pointer-events: auto;
+}
+
+.vrg-step-num-bg {
+	font-family: 'Poppins', sans-serif;
+	font-size: 120px;
+	font-weight: 800;
+	line-height: 0.9;
+	color: #f0f2f4;
+	margin-bottom: -8px;
+	user-select: none;
+	pointer-events: none;
+}
+
+.vrg-step-divider {
+	width: 40px;
+	height: 3px;
+	background: var(--vrg-accent);
+	border-radius: 2px;
+	margin-bottom: 18px;
+}
+
+.vrg-step-title {
+	font-family: 'Poppins', sans-serif;
+	font-size: 44px;
+	font-weight: 700;
+	color: #1a1a2e;
+	line-height: 1.05;
+	letter-spacing: -1.5px;
+	margin-bottom: 20px;
+}
+
+.vrg-step-desc {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	line-height: 1.85;
+	color: #6c757d;
+	max-width: 500px;
+	margin: 0;
+}
+
+/* ---- Scroll hint ---- */
+.vrg-scroll-hint {
+	position: absolute;
+	bottom: 28px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 6px;
+	color: #bbb;
+	font-family: 'Poppins', sans-serif;
+	font-size: 10px;
+	letter-spacing: 2.5px;
+	text-transform: uppercase;
+	transition: opacity 0.4s ease;
+}
+
+.vrg-scroll-hint.is-hidden {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.vrg-scroll-hint-icon {
+	animation: vrg-nudge 1.8s ease-in-out infinite;
+}
+
+@keyframes vrg-nudge {
+	0%, 100% { transform: translateY(0); }
+	50%       { transform: translateY(5px); }
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 991px) {
+	.vrg-process-inner {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 24px;
+		padding: 40px 24px;
+	}
+
+	.vrg-left-panel {
+		flex: none;
+		width: 100%;
+	}
+
+	.vrg-section-title {
+		font-size: 22px;
+		margin-bottom: 20px;
+	}
+
+	.vrg-step-nav {
+		flex-direction: row;
+		overflow-x: auto;
+		padding-bottom: 4px;
+	}
+
+	.vrg-progress-track { display: none; }
+
+	.vrg-nav-item {
+		flex-direction: column;
+		align-items: center;
+		gap: 6px;
+		padding: 8px 12px;
+		flex-shrink: 0;
+	}
+
+	.vrg-right-panel {
+		width: 100%;
+		height: 300px;
+	}
+
+	.vrg-step-num-bg { font-size: 64px; }
+	.vrg-step-title  { font-size: 28px; }
+	.vrg-step-desc   { font-size: 14px; }
+
+	.vrg-scroll-hint { display: none; }
+}
+
