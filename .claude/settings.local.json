@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(du -sh:*)",
-      "Bash(py:*)"
+      "Bash(py:*)",
+      "Bash(powershell:*)"
     ]
   }
 }

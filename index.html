@@ -297,60 +297,41 @@
 				<!-- Our process
 				============================================= -->
 				<div class="section p-0 mt-0 bg-transparent">
-					<div class="row align-items-stretch">
-						<div class="col-lg-6 text-center">
-							<img style="padding: 2em; width: 80%;" src="images/impact.png" alt="">
-						</div>
-
-						<div class="col-lg-6 col-padding">
+					<div class="container"><div class="row g-4 align-items-center py-6">
+						
+						<div class="col-lg-6">
 							<div>
-								<div style="position: relative;">
+								<div style="position: relative; margin-top: 0;">
 									<div class="heading-block border-0" data-heading="P">
 										<h3 class="text-transform-none ls-0">Our Process</h3>
 									</div>
 								</div>
 
-								<!-- About Us Featured Boxes
-								============================================= -->
-								<div class="row g-5">
-									<div class="col-lg-10 col-md-8">
-										<div class="feature-box fbox-plain">
-											<div class="fbox-content">
-												<h3 style="color: #6fb7f5;">A Unifying Leadership Philosophy</h3>
-												<p>IMPACT is the lens through which all our work is designed and
-													delivered. It aligns leaders around clarity, ownership, and
-													sustainable decision-making — so growth is intentional, not
-													reactive.</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-10 col-md-8">
-										<div class="feature-box fbox-plain">
-											<div class="fbox-content">
-												<h3 style="color: #6fb7f5;">A Practical Operating System for Leadership
-												</h3>
-												<p>IMPACT provides a structured yet flexible framework that guides
-													coaching conversations, leadership programs, and culture
-													engagements. It ensures consistency without rigidity.</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-10 col-md-8">
-										<div class="feature-box fbox-plain">
-											<div class="fbox-content">
-												<h3 style="color: #6fb7f5;">Delivered Through Experience</h3>
-												<p>IMPACT is not a standalone product — it’s embedded within executive
-													coaching, workshops, and learning experiences. Leaders encounter it
-													in action, not theory.</p>
-											</div>
-										</div>
-									</div>
-								</div>
+								<h2 style="color: #6fb7f5;">The IMPACT Framework™</h2>
+								<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto reiciendis harum, nemo quidem obcaecati illum? Tempora sapiente illum iusto placeat iste facilis temporibus reprehenderit velit vero. Eos ea earum id.</p>
+							<div id="impact-slide-text" class="vrg-slide-text">
+								<h4 class="vrg-slide-title"></h4>
+								<p class="vrg-slide-desc"></p>
+							</div>
 							</div>
 						</div>
-
+						
+						<div class="col-lg-6">
+							<div class="vrg-gallery-wrapper" style="justify-content: center;">
+																<div class="vrg-gallery">
+									<div class="vrg-gallery-track">
+										<img src="images/impact-1.png" alt="" class="vrg-gallery-slide active" data-title="Intentionality" data-text="Lead by design, not by default">
+										<img src="images/impact-2.png" alt="" class="vrg-gallery-slide" data-title="Mindset" data-text="Master internal narratives and build resilience">
+										<img src="images/impact-3.png" alt="" class="vrg-gallery-slide" data-title="Purpose" data-text="Anchor every action to what matters most">
+										<img src="images/impact-4.png" alt="" class="vrg-gallery-slide" data-title="Accountability" data-text="Foster ownership—without burnout">
+										<img src="images/impact-5.png" alt="" class="vrg-gallery-slide" data-title="Connection" data-text="Strengthen influence through authentic relationships">
+										<img src="images/impact-6.png" alt="" class="vrg-gallery-slide" data-title="Transformation" data-text="Drive lasting, measurable growth">
+									</div>
+								</div>
+															</div>
+						</div>
 					</div>
-				</div>
+				</div></div><!-- /.row /.container -->
 
 				<div class="section" style="background-color: #def0ff;">
 
@@ -802,6 +783,39 @@
 		});
 	</script>
 
+	<script>
+		(function () {
+			document.querySelectorAll('.vrg-gallery').forEach(function (gallery) {
+				var slides = gallery.querySelectorAll('.vrg-gallery-slide');
+				var current = 0;
+				var titleEl = document.querySelector('.vrg-slide-title');
+				var descEl  = document.querySelector('.vrg-slide-desc');
+
+				function updateText(slide) {
+					if (!titleEl || !descEl) return;
+					titleEl.classList.remove('vrg-slide-text-visible');
+					descEl.classList.remove('vrg-slide-text-visible');
+					setTimeout(function () {
+						titleEl.textContent = slide.dataset.title || '';
+						descEl.textContent  = slide.dataset.text  || '';
+						titleEl.classList.add('vrg-slide-text-visible');
+						descEl.classList.add('vrg-slide-text-visible');
+					}, 150);
+				}
+
+				function show(index) {
+					slides[current].classList.remove('active');
+					current = (index + slides.length) % slides.length;
+					slides[current].classList.add('active');
+					updateText(slides[current]);
+				}
+
+				updateText(slides[0]);
+
+				setInterval(function () { show(current + 1); }, 3000);
+			});
+		})();
+	</script>
 </body>
 
 </html>
