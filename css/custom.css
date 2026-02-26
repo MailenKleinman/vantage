@@ -7,6 +7,23 @@
 
 
 /* ================================================================
+   Global Font Override — Manrope
+   ================================================================ */
+:root {
+	--cnvs-body-font: 'Manrope', sans-serif;
+	--cnvs-primary-font: 'Manrope', sans-serif;
+	--cnvs-secondary-font: 'Manrope', sans-serif;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, a, li, button, input, textarea, select, div, section, header, footer, nav, span:not([class*="fa-"]):not([class*="bi-"]):not([class*="icon"]) {
+	font-family: 'Manrope', sans-serif !important;
+}
+
+h3 {
+	font-weight: 800 !important;
+}
+
+/* ================================================================
    Global Link & Button Color
    ================================================================ */
 a,
@@ -350,6 +367,26 @@ a.color {
 	background: rgba(0, 0, 0, 0.7);
 }
 
+/* ================================================================
+   Results — centre icon with text
+   ================================================================ */
+.fbox-plain.feature-box {
+	align-items: center;
+}
+
+/* ================================================================
+   Team Spotlight Sequence
+   ================================================================ */
+.vrg-team-item img {
+	opacity: 0.25;
+	transition: opacity 0.8s ease;
+}
+
+.vrg-team-item.vrg-team-active img {
+	opacity: 1;
+}
+
+/* ================================================================ */
 .vrg-slide-text {
 	margin-top: 16px;
 }
