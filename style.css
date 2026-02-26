@@ -17350,7 +17350,6 @@ img.lazy:not([src]) {
   z-index: 299;
   width: 100%;
   background-color: var(--cnvs-header-bg);
-  border-bottom: 1px solid var(--cnvs-header-border-color);
   transition: height 0.2s ease 0s, background-color 0.3s ease 0s;
   backface-visibility: hidden;
 }
@@ -17582,7 +17581,6 @@ body:not(.is-expanded-menu):not(.primary-menu-open) .semi-transparent.transparen
 }
 .is-expanded-menu .full-header #logo {
   padding-right: 30px;
-  border-right: 1px solid var(--cnvs-header-border-color);
 }
 .is-expanded-menu #header.transparent-header.full-header #logo {
   border-right-color: var(--cnvs-header-transparent-border-color);

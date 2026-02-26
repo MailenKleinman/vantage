@@ -368,6 +368,101 @@ a.color {
 }
 
 /* ================================================================
+   Mobile Header — smaller logo, logo left, hamburger right
+   ================================================================ */
+@media (max-width: 991px) {
+	#header {
+		height: 60px;
+		overflow: visible !important;
+	}
+
+	/* Drop mobile menu below the header, edge to edge */
+	#header .primary-menu {
+		position: fixed !important;
+		top: 60px !important;
+		left: 0 !important;
+		right: 0 !important;
+		width: 100vw !important;
+		transform: none !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		border: none !important;
+		background: #fff;
+		z-index: 298;
+		align-items: flex-start !important;
+		min-height: 0 !important;
+		height: auto !important;
+	}
+
+	#header .primary-menu .menu-container,
+	#header .primary-menu > *,
+	#header .primary-menu ul {
+		margin-top: 0 !important;
+		padding-top: 0 !important;
+	}
+
+	/* Full height hero on mobile */
+	#slider {
+		min-height: 100vh !important;
+		height: 100vh !important;
+	}
+
+	#slider .slider-inner,
+	#slider .swiper,
+	#slider .swiper-wrapper,
+	#slider .swiper-slide {
+		min-height: 100vh !important;
+		height: 100vh !important;
+	}
+
+	/* Push caption below the fixed header */
+	#slider.include-header .slider-caption {
+		box-sizing: border-box;
+		overflow: visible;
+	}
+
+	/* Scale down hero text so nothing gets clipped */
+	#slider .slider-caption h3 {
+		font-size: 1.8rem !important;
+		line-height: 1.2em !important;
+	}
+
+	/* Show the paragraph on mobile */
+	#slider .slider-caption p {
+		display: block !important;
+		font-size: 0.95rem;
+	}
+
+	.vrg-video-thumb {
+		height: 500px !important;
+		width: 100% !important;
+		object-fit: cover;
+	}
+
+	.header-row {
+		flex-wrap: nowrap;
+		justify-content: space-between;
+	}
+
+	#logo {
+		margin-right: auto;
+		justify-content: flex-start;
+	}
+
+	#header-wrap #logo img {
+		height: auto;
+		max-height: 40px;
+		width: auto;
+		object-fit: contain;
+	}
+
+	.primary-menu-trigger {
+		margin-left: auto;
+		order: 2;
+	}
+}
+
+/* ================================================================
    Results — centre icon with text
    ================================================================ */
 .fbox-plain.feature-box {
@@ -448,5 +543,85 @@ a.color {
 	.vrg-step-desc   { font-size: 14px; }
 
 	.vrg-scroll-hint { display: none; }
+}
+
+@media (max-width: 991px) {
+	.mobile-cont {
+		margin-left: 20px;
+	}
+}
+
+@media (max-width: 575.98px) {
+	.one-page-arrow {
+		display: block !important;
+	}
+
+	/* Center social icons in footer on mobile */
+	.vrg-social-col {
+		text-align: center !important;
+		display: flex !important;
+		justify-content: center !important;
+	}
+
+	/* Remove transparent portion of gradient container on mobile */
+	.promo[style*="linear-gradient(transparent"] {
+		background: linear-gradient(#6fb7f5, #10518b) !important;
+	}
+
+	/* Our Process — fix text overflow on mobile */
+	#our-process {
+		margin-top: 3rem !important;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		overflow: hidden;
+	}
+
+	#our-process .container {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+
+	/* 5 A's — center title on mobile */
+	.container:has(.vrg-team-row) > h2 {
+		text-align: center;
+	}
+
+	/* 5 A's — column layout, centered on mobile */
+	.vrg-team-row {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.vrg-team-row .vrg-team-item {
+		width: 60%;
+	}
+
+	/* Centre problem boxes as a group on mobile */
+	.container.mt-5 .row.col-mb-50 .col-sm-6 {
+		max-width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/* Centre results boxes as a group on mobile */
+	.section.bg-transparent .row.justify-content-center .col-sm-6 {
+		max-width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/* Video section — padding + center text on mobile */
+	.section.bg-transparent.mt-0 .container {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+
+	.section.bg-transparent.mt-0 .col-lg-6[style*="padding-left"] {
+		padding-left: 0 !important;
+		padding-top: 2rem;
+		max-width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
