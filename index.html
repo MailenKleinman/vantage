@@ -145,7 +145,7 @@
 								</div>
 							</div>
 							<div class="video-wrap">
-								<video autoplay muted loop playsinline
+								<video autoplay muted loop playsinline webkit-playsinline
 									style="height: 100%; object-fit: cover;">
 									<source src="images/bg-video.mp4" type="video/mp4">
 								</video>
@@ -886,6 +886,18 @@
 
 				setInterval(function () { show(current + 1); }, 1000);
 			});
+		})();
+	</script>
+
+	<script>
+		(function () {
+			function tryPlayVideos() {
+				document.querySelectorAll('video[autoplay]').forEach(function (v) {
+					v.play().catch(function () {});
+				});
+			}
+			document.addEventListener('DOMContentLoaded', tryPlayVideos);
+			window.addEventListener('load', tryPlayVideos);
 		})();
 	</script>
 
