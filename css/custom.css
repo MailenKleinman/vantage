@@ -9,6 +9,14 @@
 /* ================================================================
    About Page — Hero
    ================================================================ */
+#speaking-hero {
+	position: relative;
+	min-height: 80vh;
+	display: flex;
+	align-items: center;
+	padding-top: 80px;
+}
+
 #about-hero {
 	position: relative;
 	min-height: 80vh;
@@ -1131,6 +1139,14 @@ a.color {
 
 .mobile-about {
 	margin-top: 7em;
+}
+
+/* ================================================================
+   FAQ Accordion — remove focus border
+   ================================================================ */
+.accordion-button:focus {
+	box-shadow: none;
+	border-color: transparent;
 }
 
 @media (max-width: 575.98px) {
