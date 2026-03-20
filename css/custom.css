@@ -9,7 +9,8 @@
 /* ================================================================
    About Page — Hero
    ================================================================ */
-#speaking-hero {
+#speaking-hero,
+#coaching-hero {
 	position: relative;
 	min-height: 80vh;
 	display: flex;
