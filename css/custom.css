@@ -963,12 +963,13 @@ a.color {
 	#slider.include-header .slider-caption {
 		box-sizing: border-box;
 		overflow: visible;
+		margin-top: -80px;
 	}
 
 	/* Scale down hero text so nothing gets clipped */
 	#slider .slider-caption h3 {
-		font-size: 1.8rem !important;
-		line-height: 1.2em !important;
+		font-size: 2.8rem !important;
+		line-height: 1.1em !important;
 	}
 
 	/* Show the paragraph on mobile */
@@ -1174,6 +1175,193 @@ a.color {
 }
 
 /* ================================================================
+   Accelerate with IMPACT™ — Connected Process Steps
+   ================================================================ */
+.vrg-process-steps {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.vrg-ps-item {
+	flex: 1;
+	text-align: center;
+	max-width: 180px;
+	padding: 0 8px;
+}
+
+.vrg-ps-item img {
+	width: 100%;
+	aspect-ratio: 1/1;
+	object-fit: cover;
+	border-radius: 8px;
+}
+
+.vrg-ps-arrow {
+	flex: 0 0 auto;
+	display: flex;
+	align-items: flex-start;
+	padding-top: 38px;
+	color: #6fb7f5;
+	font-size: 1.6rem;
+	line-height: 1;
+}
+
+.vrg-loop-indicator {
+	margin-top: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	color: #6fb7f5;
+	font-weight: 700;
+	font-size: 0.95rem;
+}
+
+/* Loop-back arrow — always visible, aligned by JS */
+#vrg-loop-arrow {
+	pointer-events: none;
+	margin-top: 4px;
+}
+
+.vrg-loop-arc {
+	height: 28px;
+	border: 2px solid #6fb7f5;
+	border-top: none;
+	border-radius: 0 0 20px 20px;
+	position: relative;
+	box-sizing: border-box;
+}
+
+/* Upward arrowhead at left end — points back toward Assess */
+.vrg-loop-arc::before {
+	content: '';
+	position: absolute;
+	left: -7px;
+	top: -9px;
+	width: 0;
+	height: 0;
+	border-bottom: 10px solid #6fb7f5;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+}
+
+@media (max-width: 767px) {
+	#vrg-loop-arrow { display: none; }
+}
+
+@media (max-width: 767px) {
+	.vrg-process-steps {
+		flex-wrap: wrap;
+		gap: 16px;
+		justify-content: space-around;
+	}
+
+	.vrg-ps-item {
+		flex: 0 0 42%;
+		max-width: 42%;
+	}
+
+	.vrg-ps-arrow {
+		display: none;
+	}
+}
+
+/* ================================================================
+   Full-width Video Statement Section
+   ================================================================ */
+.vrg-video-statement {
+	position: relative;
+	width: 100%;
+	height: 520px;
+	overflow: hidden;
+}
+
+.vrg-vs-video {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.vrg-vs-overlay {
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.6);
+}
+
+.vrg-vs-content {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 40px;
+	z-index: 2;
+}
+
+.vrg-vs-quote {
+	font-size: clamp(1.2rem, 2.5vw, 1.9rem);
+	font-weight: 700;
+	color: #fff;
+	line-height: 1.6;
+	text-align: center;
+	max-width: 860px;
+	margin: 0;
+	text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 575.98px) {
+	.vrg-video-statement {
+		height: 420px;
+	}
+
+	.vrg-vs-content {
+		padding: 28px 20px;
+	}
+}
+
+/* ================================================================
+   Testimonial slider — fixed minimum height (sized to longest slide)
+   ================================================================ */
+.testimonial.fslider .flexslider {
+	min-height: 480px;
+}
+
+@media (max-width: 575.98px) {
+	.testimonial.fslider .flexslider {
+		height: 780px !important;
+		min-height: unset;
+		overflow: hidden;
+	}
+}
+
+/* ================================================================
+   IMPACT Quotes — all visible, active one highlighted
+   ================================================================ */
+.vrg-iq-item {
+	opacity: 0.25;
+	transition: opacity 0.5s ease;
+	font-size: 0.95rem;
+	line-height: 1.6;
+	padding: 5px 0;
+	border-left: 3px solid transparent;
+	padding-left: 10px;
+}
+
+.vrg-iq-item.active {
+	opacity: 1;
+	border-left-color: #6fb7f5;
+}
+
+.vrg-iq-label {
+	font-weight: 800;
+	color: #6fb7f5;
+	margin-right: 4px;
+}
+
+/* ================================================================
    Coaching Offerings — premium minimal cards
    ================================================================ */
 .vrg-offering-card {
@@ -1281,5 +1469,98 @@ a.color {
 	#about-hero {
 		min-height: 75vh;
 		padding-top: 0 !important;
+	}
+}
+
+
+/* ================================================================
+   Floating CTA Button
+================================================================ */
+
+.vrg-float-cta {
+	position: fixed;
+	bottom: 28px;
+	right: 28px;
+	z-index: 9999;
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	background-color: #6fb7f5;
+	color: #fff !important;
+	text-decoration: none !important;
+	padding: 14px 22px;
+	border-radius: 50px;
+	box-shadow: 0 6px 24px rgba(111, 183, 245, 0.45);
+	font-family: 'Manrope', sans-serif;
+	font-weight: 700;
+	font-size: 1rem;
+	letter-spacing: 0.01em;
+	transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+	white-space: nowrap;
+}
+
+.vrg-float-cta:hover {
+	background-color: #10518b;
+	color: #fff !important;
+	transform: translateY(-3px);
+	box-shadow: 0 10px 30px rgba(16, 81, 139, 0.5);
+}
+
+.vrg-float-cta-icon {
+	font-size: 1.15rem;
+	line-height: 1;
+	display: flex;
+	align-items: center;
+}
+
+.vrg-float-cta-text {
+	line-height: 1;
+}
+
+/* On mobile, show icon only to save space */
+@media (max-width: 575.98px) {
+	.vrg-problem-box {
+		margin-left: 16px !important;
+		margin-right: 16px !important;
+		padding-left: 20px !important;
+		padding-right: 20px !important;
+		width: auto !important;
+		max-width: 100% !important;
+		box-sizing: border-box !important;
+	}
+
+	.vrg-engage-video {
+		padding-left: 16px !important;
+		padding-right: 16px !important;
+	}
+
+	.vrg-engage-text {
+		padding-left: 16px !important;
+		padding-right: 16px !important;
+		text-align: center;
+	}
+
+	.vrg-engage-text ul {
+		display: inline-block;
+		text-align: left;
+	}
+}
+
+@media (max-width: 575.98px) {
+	.vrg-float-cta {
+		bottom: 20px;
+		right: 20px;
+		padding: 14px 16px;
+		border-radius: 50%;
+		gap: 0;
+		box-shadow: 0 6px 20px rgba(16, 81, 139, 0.45);
+	}
+
+	.vrg-float-cta-text {
+		display: none;
+	}
+
+	.vrg-float-cta-icon {
+		font-size: 1.4rem;
 	}
 }

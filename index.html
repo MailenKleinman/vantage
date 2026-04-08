@@ -128,9 +128,9 @@
 								<div class="slider-caption slider-caption-center">
 									<div>
 										<h3 class="font-primary text-transform-none"
-											style="font-size: clamp(2.8rem, 6vw, 5.2rem); font-weight: 800; letter-spacing: -2.5px; line-height: 1.05em;">
+											style="font-size: clamp(3.6rem, 8vw, 5.2rem); font-weight: 800; letter-spacing: -2.5px; line-height: 1.05em;">
 											Build
-											Leaders Who <br>Lead Themselves</h3>
+											Leaders Who <br class="d-none d-sm-block">Lead Themselves</h3>
 										<p class="font-primary d-none d-sm-block"
 											style="font-size: 1.45rem; font-weight: 500; color: rgba(255,255,255,0.88); max-width: 620px; margin: 24px auto 0;">
 											Transform your leadership from reactive to proactive. Lasting IMPACT starts
@@ -198,7 +198,7 @@
 			<div class="content-wrap pb-0" style="z-index: 1;">
 
 				<!-- The problem -->
-				<div data-animate="fadeInUp" class="container mt-5">
+				<div data-animate="fadeInUp" class="container mt-5 vrg-problem-box" style="background-color: #def0ff; border-radius: 12px; padding: 60px 40px;">
 
 					<!-- What We Do
 	============================================= -->
@@ -288,6 +288,33 @@
 					</div>
 				</div>
 
+
+				<!-- Erwin section -->
+				<div data-animate="fadeInUp" class="section bg-transparent">
+					<div class="container">
+						<!-- Mobile image above gradient -->
+						<div class="d-block d-lg-none text-center">
+							<img src="images/conference2.png" alt="..." style="max-height: 280px; object-fit: contain;">
+						</div>
+
+						<div class="promo px-5"
+							style="background: linear-gradient(transparent 20%, #6fb7f5 20%, #10518b);">
+							<div class="row align-items-center">
+								<div class="col-12 col-lg-5 d-none d-lg-block">
+									<img src="images/conference2.png" alt="..." class="ms-lg-4">
+								</div>
+								<div class="col-1"></div>
+								<div class="col-12 col-lg-6 pb-4 pb-lg-0" style="padding-top: 70px;">
+									<h2 class="text-uppercase ls-1 mb-2 text-white">25+ Years of Leadership Experience
+									</h2>
+									<p class="text-white">“I know what it’s like to be praised for getting results, yet secretly feel like you’re barely treading water. Years ago, I was trapped by my own success—constantly busy, but not truly leading. The breakthrough came when I realized that real impact starts with leading myself. That’s why I created the Vantage approach—to help leaders like you make the shift from reactive to proactive and finally create the legacy you’re meant for.”
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
 				<!-- What we do
 				============================================= -->
 				<div data-animate="fadeIn" class="parallax scroll-detect mt-6 mb-0 border-top-0">
@@ -323,7 +350,67 @@
 					</div>
 				</div>
 
-				<!-- Impact 
+				<!-- Accelerate with IMPACT — 5 A's connected process
+				============================================= -->
+				<div class="section" style="background-color: #def0ff; margin-top: 0 !important;">
+					<div class="container">
+
+						<div class="text-center mb-5" data-animate="fadeInUp">
+							<h2 class="text-transform-none" style="color: #111; letter-spacing: -1px;">Accelerate with IMPACT™</h2>
+							<p class="mt-2" style="max-width: 620px; margin: 0 auto;">A 5-step pathway to move from overload and firefighting to <br> proactive, high-performing leadership.</p>
+						</div>
+
+						<div class="vrg-process-steps" data-animate="fadeInUp">
+
+							<div class="vrg-ps-item vrg-team-item">
+								<img src="images/a1.png" alt="Assess">
+								<h5 class="mt-3 mb-1">Assess</h5>
+								<p class="text-muted small">Uncover your true barriers and opportunities through honest, data-driven evaluation.</p>
+							</div>
+
+							<div class="vrg-ps-arrow"><i class="bi-arrow-right"></i></div>
+
+							<div class="vrg-ps-item vrg-team-item">
+								<img src="images/a2.png" alt="Align">
+								<h5 class="mt-3 mb-1">Align</h5>
+								<p class="text-muted small">Sync your goals, values, and resources, ensuring every effort contributes to meaningful progress.</p>
+							</div>
+
+							<div class="vrg-ps-arrow"><i class="bi-arrow-right"></i></div>
+
+							<div class="vrg-ps-item vrg-team-item">
+								<img src="images/a3.png" alt="Apply">
+								<h5 class="mt-3 mb-1">Apply</h5>
+								<p class="text-muted small">Embed IMPACT principles into daily leadership, turning strategy into results.</p>
+							</div>
+
+							<div class="vrg-ps-arrow"><i class="bi-arrow-right"></i></div>
+
+							<div class="vrg-ps-item vrg-team-item">
+								<img src="images/a4.png" alt="Adapt">
+								<h5 class="mt-3 mb-1">Adapt</h5>
+								<p class="text-muted small">Use real-time feedback and insights to refine your approach and overcome new challenges.</p>
+							</div>
+
+							<div class="vrg-ps-arrow"><i class="bi-arrow-right"></i></div>
+
+							<div class="vrg-ps-item vrg-team-item">
+								<img src="images/a5.png" alt="Advance">
+								<h5 class="mt-3 mb-1">Advance</h5>
+								<p class="text-muted small">Scale what works, build ongoing momentum, and accelerate your growth as your capacity increases.</p>
+							</div>
+
+						</div>
+
+						<!-- Loop arrow (shown when Advance is active) -->
+						<div id="vrg-loop-arrow">
+							<div class="vrg-loop-arc"></div>
+						</div>
+
+					</div>
+				</div>
+
+				<!-- IMPACT Framework
 				============================================= -->
 				<div id="our-process" class="section p-0 mt-0 bg-transparent" style="margin-bottom: 0 !important;">
 					<div class="container">
@@ -331,19 +418,17 @@
 
 							<div data-animate="fadeInLeft" class="col-lg-6">
 								<div>
-									<div style="position: relative; margin-top: 0;">
-										<div class="heading-block border-0">
-											<h3 class="text-transform-none ls-0">Our Process</h3>
-										</div>
-									</div>
-
-									<h2 style="color: #6fb7f5;">The IMPACT Framework™</h2>
+									<h2 style="color: #6fb7f5;">IMPACT™ over Impression</h2>
 									<p>IMPACT is the lens through which all our work is designed and delivered. It
 										aligns leaders around clarity, ownership, and sustainable decision-making, so
 										growth is intentional, not reactive.</p>
-									<div id="impact-slide-text" class="vrg-slide-text">
-										<h4 class="vrg-slide-title"></h4>
-										<p class="vrg-slide-desc"></p>
+									<div class="vrg-impact-quotes mt-3">
+										<div class="vrg-iq-item active"><span class="vrg-iq-label">Intentionality:</span> "Impact is crafted by choice."</div>
+										<div class="vrg-iq-item"><span class="vrg-iq-label">Mindset:</span> "A leader's greatest asset isn't their answers—it's their attitude."</div>
+										<div class="vrg-iq-item"><span class="vrg-iq-label">Purpose:</span> "Purpose isn't a hat you wear; it's roots that anchor your life."</div>
+										<div class="vrg-iq-item"><span class="vrg-iq-label">Accountability:</span> "Accountability is the discipline of measuring what you did—not what you hoped."</div>
+										<div class="vrg-iq-item"><span class="vrg-iq-label">Connection:</span> "You cannot make an IMPACT without first making Contact."</div>
+										<div class="vrg-iq-item"><span class="vrg-iq-label">Transformation:</span> "Transformation is NOT a team sport—it starts with you."</div>
 									</div>
 								</div>
 							</div>
@@ -377,69 +462,18 @@
 					</div>
 				</div><!-- /.row /.container -->
 
-				<!-- 5 A steps -->
-				<div class="section" style="background-color: #def0ff; margin-top: 0 !important;">
-					<div class="container">
-						<h2 data-animate="bounceIn" style="color: #6fb7f5;">The 5 A's Implementation Path</h2>
-						<div class="row g-4 justify-content-between vrg-team-row">
-
-							<div data-animate="bounceIn" class="col-6 col-md-4 col-lg-2 text-center vrg-team-item">
-								<img src="images/a1.png" alt="Placeholder"
-									style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:8px;">
-								<h5 class="mt-3 mb-1">Assess</h5>
-								<p class="text-muted small">Uncover your true barriers and opportunities</p>
-							</div>
-
-							<div data-animate="bounceIn" class="col-6 col-md-4 col-lg-2 text-center vrg-team-item">
-								<img src="images/a2.png" alt="Placeholder"
-									style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:8px;">
-								<h5 class="mt-3 mb-1">Align</h5>
-								<p class="text-muted small">Sync goals, values, and resources for maximum synergy</p>
-							</div>
-
-							<div data-animate="bounceIn" class="col-6 col-md-4 col-lg-2 text-center vrg-team-item">
-								<img src="images/a3.png" alt="Placeholder"
-									style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:8px;">
-								<h5 class="mt-3 mb-1">Apply</h5>
-								<p class="text-muted small">Put IMPACT principles into action, every day</p>
-							</div>
-
-							<div data-animate="bounceIn" class="col-6 col-md-4 col-lg-2 text-center vrg-team-item">
-								<img src="images/a4.png" alt="Placeholder"
-									style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:8px;">
-								<h5 class="mt-3 mb-1">Adapt</h5>
-								<p class="text-muted small">Adjust proactively using feedback and insights</p>
-							</div>
-
-							<div data-animate="bounceIn" class="col-6 col-md-4 col-lg-2 text-center vrg-team-item">
-								<img src="images/a5.png" alt="Placeholder"
-									style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:8px;">
-								<h5 class="mt-3 mb-1">Advance</h5>
-								<p class="text-muted small">Cement gains and scale your leadership impact</p>
-							</div>
-
-						</div>
-					</div>
-				</div>
-
 				<!-- Results 
 				============================================= -->
-				<div class="section bg-transparent mb-0">
+				<div class="section mb-0" style="background-color: #def0ff; padding-top: 60px; padding-bottom: 10px;">
 					<div class="container">
-						<div class="heading-block text-center border-0">
-							<h3 data-animate="slideIn" class="text-transform-none ls-0">Results</h3>
-						</div>
-
-
-						<div class="row justify-content-center col-mb-50 mb-3">
+						<div class="row justify-content-center col-mb-50 mb-0">
 							<div data-animate="slideInLeft" class="col-sm-6 col-lg-4">
 								<div class="feature-box fbox-plain">
 									<div style="width: auto !important;" class="fbox-icon">
 										<a href="#"><img src="images/check.png" alt="Image"></a>
 									</div>
 									<div class="fbox-content">
-										<h3 class="text-transform-none fw-bold ls-0">Peace of mind, even under
-											pressure</h3>
+										<h3 class="text-transform-none fw-bold ls-0">Confidently lead with vision—even under pressure.</h3>
 									</div>
 								</div>
 							</div>
@@ -450,7 +484,7 @@
 										<a href="#"><img src="images/check.png" alt="Image"></a>
 									</div>
 									<div class="fbox-content">
-										<h3 class="text-transform-none fw-bold ls-0">Empowered, proactive teams</h3>
+										<h3 class="text-transform-none fw-bold ls-0">Create space for strategic thinking and innovation.</h3>
 									</div>
 								</div>
 							</div>
@@ -461,8 +495,7 @@
 										<a href="#"><img src="images/check.png" alt="Image"></a>
 									</div>
 									<div class="fbox-content">
-										<h3 class="text-transform-none fw-bold ls-0">Professional satisfaction and
-											renewed energy</h3>
+										<h3 class="text-transform-none fw-bold ls-0">Inspire teams by modeling balanced, purpose-driven leadership.</h3>
 									</div>
 								</div>
 							</div>
@@ -473,8 +506,7 @@
 										<a href="#"><img src="images/check.png" alt="Image"></a>
 									</div>
 									<div class="fbox-content">
-										<h3 class="text-transform-none fw-bold ls-0">Measurable business results and
-											productivity</h3>
+										<h3 class="text-transform-none fw-bold ls-0">Achieve big results without sacrificing well-being.</h3>
 									</div>
 								</div>
 							</div>
@@ -485,20 +517,7 @@
 										<a href="#"><img src="images/check.png" alt="Image"></a>
 									</div>
 									<div class="fbox-content">
-										<h3 class="text-transform-none fw-bold ls-0">Higher engagement, morale, and
-											collaboration</h3>
-									</div>
-								</div>
-							</div>
-
-							<div data-animate="slideInRight" class="col-sm-6 col-lg-4">
-								<div class="feature-box fbox-plain">
-									<div style="width: auto !important;" class="fbox-icon">
-										<a href="#"><img src="images/check.png" alt="Image"></a>
-									</div>
-									<div class="fbox-content">
-										<h3 class="text-transform-none fw-bold ls-0">Genuine connection and
-											influence at every level</h3>
+										<h3 class="text-transform-none fw-bold ls-0">Leave a legacy of impact, not just busyness.</h3>
 									</div>
 								</div>
 							</div>
@@ -508,7 +527,7 @@
 
 				<!-- Testimonials 
 				============================================= -->
-				<div class="section parallax scroll-detect mt-3 mb-0 border-top-0">
+				<div class="section parallax scroll-detect mt-0 mb-0 border-top-0">
 					<img src="images/sections/2.jpg" class="parallax-bg">
 					<div class="container">
 
@@ -525,17 +544,15 @@
 
 							<!-- Testimonials slider
 							============================================= -->
-							<div data-animate="fadeInRight" class="col-md-5 offset-md-1">
+							<div data-animate="fadeInRight" class="col-md-6">
 								<div class="fslider testimonial bg-white p-5 rounded" data-animation="slide"
 									data-arrows="false">
 									<div class="flexslider">
 										<div class="slider-wrap">
 											<div class="slide">
-												<p class="mb-4 font-primary">Ervin’s framework helped us move from chaos
-													to a proactive, high-performing team.</p>
-												<h4 class="h6 mb-1 fw-bold text-uppercase ls-1">Jennifer Martin</h4>
-												<small class="text-muted d-block mb-3">School Nutrition
-													Executive</small>
+												<p class="mb-4 font-primary">I had the opportunity to partner with Ervin Watson while he worked with leaders across my organization. His approach goes beyond inspiration, he creates space for leaders to better understand themselves, how they show up, and how their behaviors impact the people they lead. Ervin has a rare ability to connect with leaders at every level and translate personality and behavioral insights into practical, actionable growth. The sessions he facilitated were engaging, insightful, and meaningful, and I saw immediate value in how our leaders reflected, communicated, and led more intentionally as a result. I would highly recommend Ervin to any organization looking to develop stronger, more self-aware leaders.</p>
+												<h4 class="h6 mb-1 fw-bold text-uppercase ls-1">Dexter Oliver</h4>
+												<small class="text-muted d-block mb-3">Senior Vice President of Wholesale Technology, Truist Bank</small>
 												<div>
 													<i class="bi-star-fill text-warning"></i>
 													<i class="bi-star-fill text-warning"></i>
@@ -545,10 +562,9 @@
 												</div>
 											</div>
 											<div class="slide">
-												<p class="mb-4 font-primary">My team now leads themselves, results have
-													soared and my stress is down.</p>
-												<h4 class="h6 mb-1 fw-bold text-uppercase ls-1">Linda Waters</h4>
-												<small class="text-muted d-block mb-3">Corporate Leader</small>
+												<p class="mb-4 font-primary">Working with Ervin Watson has been an incredibly positive experience for our leadership team. Ervin has a unique way of engaging leaders that encourages honest reflection, stronger relationships, and meaningful growth. His coaching consistently helps leaders better understand how their behaviors impact their teams and their results. Beyond the practical leadership tools, Ervin’s greatest strength is his ability to inspire lasting mindset and behavior change. His work has made a real difference for our people.</p>
+												<h4 class="h6 mb-1 fw-bold text-uppercase ls-1">DJ Ernst</h4>
+												<small class="text-muted d-block mb-3">VP, Operations, Ernst Concrete</small>
 												<div>
 													<i class="bi-star-fill text-warning"></i>
 													<i class="bi-star-fill text-warning"></i>
@@ -558,10 +574,21 @@
 												</div>
 											</div>
 											<div class="slide">
-												<p class="mb-4 font-primary">Truly practical and sustainable, exactly
-													what leaders need today.</p>
-												<h4 class="h6 mb-1 fw-bold text-uppercase ls-1">Audrey Hamilton</h4>
-												<small class="text-muted d-block mb-3">Conference Organizer</small>
+												<p class="mb-4 font-primary">What has been most valuable about our coaching sessions so far has been the increased self-awareness. Coaching has given me practical tools to manage difficult conversations, take accountability without defensiveness, and focus on what I can do to improve situations rather than placing blame. Personally, it has helped me grow not just as a leader, but as a person, improving how I show up, how I listen, and how I respond under pressure.</p>
+												<h4 class="h6 mb-1 fw-bold text-uppercase ls-1">Andrea W.</h4>
+												<small class="text-muted d-block mb-3">IMPACT Coaching Client</small>
+												<div>
+													<i class="bi-star-fill text-warning"></i>
+													<i class="bi-star-fill text-warning"></i>
+													<i class="bi-star-fill text-warning"></i>
+													<i class="bi-star-fill text-warning"></i>
+													<i class="bi-star-fill text-warning"></i>
+												</div>
+											</div>
+											<div class="slide">
+												<p class="mb-4 font-primary">Working with Ervin Watson and Vantage Resource Group has been transformational for our leadership team. During a critical transition to centralized supervision, Ervin equipped our leaders with the mindset and tools to lead with greater accountability, confidence, and intention. His ability to connect with leaders and translate insight into practical action led to stronger communication, ownership, and decision-making across our team. I highly recommend Ervin to any organization looking to build stronger leaders and create lasting impact.</p>
+												<h4 class="h6 mb-1 fw-bold text-uppercase ls-1">Shani Hall</h4>
+												<small class="text-muted d-block mb-3">General Manager, School Nutrition Services, Hillsborough County Public Schools</small>
 												<div>
 													<i class="bi-star-fill text-warning"></i>
 													<i class="bi-star-fill text-warning"></i>
@@ -579,15 +606,59 @@
 					</div>
 				</div>
 
+				<!-- Trusted By — client banner
+				============================================= -->
+				<div class="section bg-white" style="padding-top: 2em !important; padding-bottom: 2em !important;">
+					<div class="container">
+						<div class="text-center mb-4" data-animate="fadeInUp">
+							<p class="vrg-about-label">Trusted By</p>
+							<h2 class="text-transform-none" style="letter-spacing: -1px;">Organizations Ervin Has Served</h2>
+						</div>
+					</div>
+
+					<div id="oc-trusted-logos" class="owl-carousel owl-carousel-full carousel-widget customjs" style="margin-top: 3em;">
+						<div class="oc-item text-center">
+							<img src="images/speaking/logo1.jpg" alt="Truist Bank" class="vrg-media-logo-img">
+						</div>
+						<div class="oc-item text-center">
+							<img src="images/speaking/logo2.jpg" alt="Ernst Concrete" class="vrg-media-logo-img">
+						</div>
+						<div class="oc-item text-center">
+							<img src="images/speaking/logo3.jpg" alt="Hillsborough County School District" class="vrg-media-logo-img">
+						</div>
+						<div class="oc-item text-center">
+							<img src="images/speaking/logo4.jpg" alt="Dothan City School District" class="vrg-media-logo-img">
+						</div>
+						<div class="oc-item text-center">
+							<img src="images/speaking/logo5.jpg" alt="Cherokee County School District" class="vrg-media-logo-img">
+						</div>
+						<div class="oc-item text-center">
+							<img src="images/speaking/logo6.jpg" alt="Clayton County School District" class="vrg-media-logo-img">
+						</div>
+						<div class="oc-item text-center">
+							<img src="images/speaking/logo7.jpg" alt="DeKalb County School District" class="vrg-media-logo-img">
+						</div>
+						<div class="oc-item text-center">
+							<img src="images/speaking/logo8.jpg" alt="NJ School Nutrition Association" class="vrg-media-logo-img">
+						</div>
+						<div class="oc-item text-center">
+							<img src="images/speaking/logo9.jpg" alt="Indiana School Nutrition Association" class="vrg-media-logo-img">
+						</div>
+						<div class="oc-item text-center">
+							<img src="images/speaking/logo10.jpg" alt="John C. Stalker Institute" class="vrg-media-logo-img">
+						</div>
+					</div>
+				</div><!-- Trusted By end -->
+
 				<!-- Video Sections
 				============================================= -->
-				<div data-animate="bounceIn" class="section bg-transparent mt-0">
+				<div data-animate="bounceIn" class="section mt-0" style="background-color: #def0ff;">
 					<div class="container">
 
 
 
-						<div class="row mt-6" style="align-items: center;">
-							<div class="col-lg-6 p-0">
+						<div class="row" style="align-items: center;">
+							<div class="col-lg-6 p-0 vrg-engage-video">
 								<!-- Youtube Video Link
 								============================================= -->
 								<a href="https://www.youtube.com/watch?v=NS0txu_Kzl8" data-lightbox="iframe">
@@ -599,65 +670,18 @@
 							</div>
 							<!-- Video Texts
 							============================================= -->
-							<div class="col-lg-6" style="padding-left: 60px;">
+							<div class="col-lg-6 vrg-engage-text" style="padding-left: 60px;">
 								<div class="heading-block mt-4 mb-4 border-0">
 									<h3 class="text-transform-none"
-										style="font-size: 46px; font-weight: 700; letter-spacing: -2px; line-height: 58px">
-										Choose your path to proactivity</h3>
+										style="font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 700; letter-spacing: -1px; line-height: 1.2;">
+										When you engage with Vantage Resource Group, you get:</h3>
 								</div>
-								<ul class="fw-normal" style="padding-left: 1.25rem; line-height: 2;">
-									<li>
-										<span style="font-weight: 600;">Keynotes</span>
-										<ul style="margin-left: 2em;">
-											<li>
-												<span style="font-weight: 600;">IMPACT Over Impression:</span>
-												Sustainable Leadership & Meaningful Influence
-											</li>
-											<li>
-												<span style="font-weight: 600;">Bend Don’t Break:</span> Personal
-												Resilience Under Pressure
-											</li>
-										</ul>
-									</li>
-									<li><span style="font-weight: 600;">Workshops:</span> Action-oriented sessions to
-										embed the IMPACT Framework™ in your
-										culture
-									</li>
-									<li><span style="font-weight: 600;">Executive Coaching:</span> 1:1 or group guidance
-										for personal transformation and
-										breakthrough
-									</li>
-									<li><span style="font-weight: 600;">Leadership Tools & Resources:</span> New
-										downloadable assessments and guides coming
-										soon
-									</li>
+								<ul class="fw-normal" style="padding-left: 1.25rem; line-height: 2.2;">
+									<li>Personalized leadership coaching sessions</li>
+									<li>Strategic workshops tailored to your team’s needs</li>
+									<li>Access to practical leadership toolkits and frameworks</li>
+									<li>Ongoing support and accountability</li>
 								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Erwin section -->
-				<div data-animate="fadeInUp" class="section bg-transparent">
-					<div class="container">
-						<!-- Mobile image above gradient -->
-						<div class="d-block d-lg-none text-center">
-							<img src="images/conference2.png" alt="..." style="max-height: 280px; object-fit: contain;">
-						</div>
-
-						<div class="promo px-5"
-							style="background: linear-gradient(transparent 20%, #6fb7f5 20%, #10518b);">
-							<div class="row align-items-center">
-								<div class="col-12 col-lg-5 d-none d-lg-block">
-									<img src="images/conference2.png" alt="..." class="ms-lg-4">
-								</div>
-								<div class="col-1"></div>
-								<div class="col-12 col-lg-6 pb-4 pb-lg-0" style="padding-top: 70px;">
-									<h2 class="text-uppercase ls-1 mb-2 text-white">25+ Years of Leadership Experience
-									</h2>
-									<p class="text-white">“I know what it’s like to be praised for getting results, yet secretly feel like you’re barely treading water. Years ago, I was trapped by my own success—constantly busy, but not truly leading. The breakthrough came when I realized that real impact starts with leading myself. That’s why I created the Vantage approach—to help leaders like you make the shift from reactive to proactive and finally create the legacy you’re meant for.”
-									</p>
-								</div>
 							</div>
 						</div>
 					</div>
@@ -710,6 +734,55 @@
 						</div>
 					</div>
 				</div>
+
+				<!-- Ervin Video Statement
+				============================================= -->
+				<div class="vrg-video-statement">
+					<video autoplay muted loop playsinline webkit-playsinline class="vrg-vs-video">
+						<source src="images/video-ervin.mp4" type="video/mp4">
+					</video>
+					<div class="vrg-vs-overlay"></div>
+					<div class="vrg-vs-content">
+						<p class="vrg-vs-quote">"I created Vantage because I believe every leader deserves to experience fulfillment and leave a lasting impact. If you're ready to reclaim your time, your purpose, and your leadership—let's talk."</p>
+					</div>
+				</div>
+
+				
+				<!-- Photo + Bio
+				============================================= -->
+				<div class="section bg-transparent">
+					<div class="container">
+						<div class="row align-items-center g-5">
+
+							<div data-animate="fadeInLeft" class="col-lg-5 text-center">
+								<img src="images/about/ervin.png" alt="Ervin Watson" class="vrg-about-photo">
+							</div>
+
+							<div data-animate="fadeInRight" class="col-lg-7">
+								<p class="vrg-about-label">Leadership Strategist &amp; Executive Coach</p>
+								<h2 class="vrg-about-bio-name">Ervin Watson</h2>
+								<p class="vrg-about-bio-text">From the earliest days of his career in Rochester, NY, Ervin was hooked on leadership. As a college freshman in New York, he picked up <em>The One Minute Manager</em> and quickly became a self-proclaimed "leadership junkie." That single book ignited a fascination with how people could be motivated, inspired, and equipped to achieve more than they ever thought possible.</p>
+								<p class="vrg-about-bio-text">His journey led him through leadership in the military and into a range of business organizations. Though he found career success, he soon realized that what truly energized him was not business, but people. His wife, his best friend for over 32 years, often joked that he was "drawn to people with problems to solve." She was right. As he invested more in others, it became clear that helping leaders grow, adapt, and become more proactive wasn't just his passion, it was his purpose. After his military career, Ervin settled in the Atlanta area (Marietta, GA), where that purpose flourished into his life's work.</p>
+
+								<div class="vrg-about-stats">
+									<div class="vrg-stat">
+										<span class="vrg-stat-num">25+</span>
+										<span class="vrg-stat-label">Years of Experience</span>
+									</div>
+									<div class="vrg-stat">
+										<span class="vrg-stat-num">32+</span>
+										<span class="vrg-stat-label">Organizations Served</span>
+									</div>
+									<div class="vrg-stat">
+										<span class="vrg-stat-num">1,000s</span>
+										<span class="vrg-stat-label">Leaders Transformed</span>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div><!-- Bio end -->
 
 				<!-- Team Work
 				============================================= -->
@@ -841,12 +914,32 @@
 
 	<!-- Go To Top
 	============================================= -->
-	<div id="gotoTop" class="uil uil-angle-up"></div>
+
 
 	<!-- JavaScripts
 	============================================= -->
 	<script src="js/plugins.min.js"></script>
 	<script src="js/functions.bundle.js"></script>
+
+	<script>
+		jQuery(window).on('load', function () {
+			jQuery('#oc-trusted-logos').owlCarousel({
+				loop: true,
+				autoplay: true,
+				autoplayTimeout: 2000,
+				autoplaySpeed: 1000,
+				autoplayHoverPause: true,
+				dots: false,
+				nav: false,
+				margin: 10,
+				items: 2,
+				responsive: {
+					576: { items: 3, margin: 10 },
+					992: { items: 5, margin: 10 }
+				}
+			});
+		});
+	</script>
 
 	<script>
 		jQuery(window).on('load', function () {
@@ -882,34 +975,46 @@
 
 	<script>
 		(function () {
+			function alignLoopArc() {
+				var steps = document.querySelectorAll('.vrg-ps-item');
+				var arc = document.querySelector('.vrg-loop-arc');
+				var container = document.querySelector('.vrg-process-steps');
+				if (!steps.length || !arc || !container) return;
+				var firstRect = steps[0].getBoundingClientRect();
+				var lastRect  = steps[steps.length - 1].getBoundingClientRect();
+				var containerRect = container.getBoundingClientRect();
+				var leftOffset  = (firstRect.left + firstRect.width / 2) - containerRect.left;
+				var rightOffset = containerRect.right - (lastRect.left + lastRect.width / 2);
+				arc.style.marginLeft  = leftOffset + 'px';
+				arc.style.marginRight = rightOffset + 'px';
+			}
+			window.addEventListener('load', alignLoopArc);
+			window.addEventListener('resize', alignLoopArc);
+		})();
+	</script>
+
+	<script>
+		(function () {
 			document.querySelectorAll('.vrg-gallery').forEach(function (gallery) {
 				var slides = gallery.querySelectorAll('.vrg-gallery-slide');
+				var quotes = document.querySelectorAll('.vrg-iq-item');
 				var current = 0;
-				var titleEl = document.querySelector('.vrg-slide-title');
-				var descEl = document.querySelector('.vrg-slide-desc');
 
-				function updateText(slide) {
-					if (!titleEl || !descEl) return;
-					titleEl.classList.remove('vrg-slide-text-visible');
-					descEl.classList.remove('vrg-slide-text-visible');
-					setTimeout(function () {
-						titleEl.textContent = slide.dataset.title || '';
-						descEl.textContent = slide.dataset.text || '';
-						titleEl.classList.add('vrg-slide-text-visible');
-						descEl.classList.add('vrg-slide-text-visible');
-					}, 150);
+				function updateQuote(index) {
+					quotes.forEach(function (q) { q.classList.remove('active'); });
+					if (quotes[index]) quotes[index].classList.add('active');
 				}
 
 				function show(index) {
 					slides[current].classList.remove('active');
 					current = (index + slides.length) % slides.length;
 					slides[current].classList.add('active');
-					updateText(slides[current]);
+					updateQuote(current);
 				}
 
-				updateText(slides[0]);
+				updateQuote(0);
 
-				setInterval(function () { show(current + 1); }, 1000);
+				setInterval(function () { show(current + 1); }, 3000);
 			});
 		})();
 	</script>
@@ -940,6 +1045,13 @@
 			}
 		})();
 	</script>
+
+	<!-- Floating CTA Button -->
+	<a href="https://calendly.com/YOUR_CALENDLY_LINK" target="_blank" rel="noopener" class="vrg-float-cta" aria-label="Schedule a Discovery Call">
+		<span class="vrg-float-cta-icon"><i class="bi-calendar-check-fill"></i></span>
+		<span class="vrg-float-cta-text">Book a Call</span>
+	</a>
+
 </body>
 
 </html>
