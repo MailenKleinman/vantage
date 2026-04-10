@@ -21,7 +21,7 @@
 
 #about-hero {
 	position: relative;
-	min-height: 80vh;
+	min-height: 90vh;
 	display: flex;
 	align-items: center;
 	padding-top: 80px;
@@ -59,24 +59,42 @@
 	letter-spacing: 3px;
 	text-transform: uppercase;
 	color: #6fb7f5;
-	margin-bottom: 16px;
+	margin-bottom: 20px;
+	border: 1px solid rgba(111, 183, 245, 0.45);
+	padding: 6px 18px;
+	border-radius: 50px;
+	background: rgba(111, 183, 245, 0.1);
 }
 
 .vrg-about-hero-title {
-	font-size: 3.4rem;
+	font-size: clamp(3rem, 7vw, 5.4rem);
 	font-weight: 800;
-	line-height: 1.15;
-	letter-spacing: -1.5px;
+	line-height: 1.05;
+	letter-spacing: -2.5px;
 	color: #fff;
+	margin-bottom: 18px;
+}
+
+.vrg-hero-accent {
+	color: #6fb7f5;
+}
+
+.vrg-about-hero-tagline {
+	font-size: 1.3rem;
+	font-weight: 600;
+	color: rgba(255, 255, 255, 0.95);
+	letter-spacing: 0.5px;
 	margin-bottom: 20px;
+	text-transform: none;
 }
 
 .vrg-about-hero-sub {
-	font-size: 1.1rem;
-	font-weight: 300;
-	color: rgba(255, 255, 255, 0.8);
-	max-width: 540px;
+	font-size: 1.15rem;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 0.78);
+	max-width: 580px;
 	margin: 0 auto;
+	line-height: 1.75;
 }
 
 /* ================================================================
@@ -397,6 +415,149 @@
 }
 
 /* ================================================================
+   About Page — Survival Mode Split Section
+   ================================================================ */
+.vrg-split-img-wrap {
+	height: 100%;
+	min-height: 560px;
+	overflow: hidden;
+	border-radius: 8px;
+	margin: 20px;
+}
+
+.vrg-split-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center top;
+	display: block;
+	border-radius: 8px;
+}
+
+.vrg-split-text {
+	padding: 60px 48px;
+}
+
+.vrg-split-body {
+	font-size: 1.25rem;
+	font-weight: 500;
+	line-height: 1.75;
+	color: #222;
+	margin-bottom: 24px;
+}
+
+.vrg-split-body:last-child {
+	margin-bottom: 0;
+}
+
+.vrg-split-body-light {
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.8;
+	color: #555;
+	margin-bottom: 16px;
+}
+
+.vrg-split-body-light:last-child {
+	margin-bottom: 0;
+}
+
+.vrg-split-img-short {
+	min-height: unset !important;
+	height: 260px !important;
+	margin: 20px;
+}
+
+.vrg-split-img-shorter {
+	min-height: unset !important;
+	height: 350px !important;
+	margin: 20px;
+}
+
+.vrg-split-img-horizontal {
+	width: 100%;
+	min-height: unset !important;
+	height: 100% !important;
+	margin: 20px 20px 20px 0;
+}
+
+/* ================================================================
+   Leadership Banner
+   ================================================================ */
+.vrg-leadership-banner {
+	background: linear-gradient(135deg, #10518b, #1a6db5);
+	padding-top: 90px !important;
+	padding-bottom: 90px !important;
+}
+
+.vrg-banner-headline {
+	font-size: clamp(2rem, 4.5vw, 3.2rem);
+	font-weight: 800;
+	letter-spacing: -1.5px;
+	line-height: 1.1;
+	color: #fff;
+	margin-bottom: 24px;
+}
+
+.vrg-banner-sub {
+	font-size: 1.15rem;
+	font-weight: 400;
+	line-height: 1.75;
+	color: rgba(255, 255, 255, 0.85);
+	max-width: 620px;
+	margin: 0 auto;
+}
+
+.vrg-check-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.vrg-check-list li {
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
+	font-size: 1rem;
+	font-weight: 500;
+	color: #333;
+	line-height: 1.6;
+	margin-bottom: 14px;
+}
+
+.vrg-check-list li::before {
+	content: '';
+	flex-shrink: 0;
+	width: 20px;
+	height: 20px;
+	background: url('../images/check.png') center/contain no-repeat;
+	margin-top: 2px;
+}
+
+.vrg-split-heading {
+	font-size: clamp(1.6rem, 3vw, 2.2rem);
+	font-weight: 800;
+	letter-spacing: -1px;
+	line-height: 1.15;
+	color: #111;
+	margin-bottom: 20px;
+}
+
+@media (max-width: 991px) {
+	.vrg-split-img-wrap {
+		min-height: 320px;
+	}
+
+	.vrg-split-text {
+		padding: 40px 20px;
+	}
+
+	.vrg-split-body {
+		font-size: 1.1rem;
+	}
+}
+
+/* ================================================================
    About Page — Media / Credentials
    ================================================================ */
 .vrg-credential-card {
@@ -474,7 +635,12 @@
    ================================================================ */
 @media (max-width: 991px) {
 	.vrg-about-hero-title {
-		font-size: 2.4rem;
+		font-size: 2.8rem;
+		letter-spacing: -1.5px;
+	}
+
+	.vrg-about-hero-tagline {
+		font-size: 1.1rem;
 	}
 
 	.vrg-approach-title {
@@ -488,8 +654,12 @@
 
 @media (max-width: 575.98px) {
 	.vrg-about-hero-title {
-		font-size: 1.9rem;
-		letter-spacing: -0.5px;
+		font-size: 2.1rem;
+		letter-spacing: -1px;
+	}
+
+	.vrg-about-hero-tagline {
+		font-size: 1rem;
 	}
 
 	.vrg-about-hero-sub {
@@ -1340,6 +1510,10 @@ a.color {
 /* ================================================================
    IMPACT Quotes — all visible, active one highlighted
    ================================================================ */
+#our-process .vrg-iq-item {
+	font-size: 0.8rem;
+	line-height: 1.55;
+}
 .vrg-iq-item {
 	opacity: 0.25;
 	transition: opacity 0.5s ease;
@@ -1467,7 +1641,7 @@ a.color {
 	}
 
 	#about-hero {
-		min-height: 75vh;
+		min-height: 80vh;
 		padding-top: 0 !important;
 	}
 }
@@ -1550,7 +1724,7 @@ a.color {
 	.vrg-float-cta {
 		bottom: 20px;
 		right: 20px;
-		padding: 14px 16px;
+		padding: 16px 16px;
 		border-radius: 50%;
 		gap: 0;
 		box-shadow: 0 6px 20px rgba(16, 81, 139, 0.45);
