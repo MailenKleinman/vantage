@@ -973,15 +973,15 @@
 			function alignLoopArc() {
 				var steps = document.querySelectorAll('.vrg-ps-item');
 				var arc = document.querySelector('.vrg-loop-arc');
-				var container = document.querySelector('.vrg-process-steps');
-				if (!steps.length || !arc || !container) return;
-				var firstRect = steps[0].getBoundingClientRect();
-				var lastRect  = steps[steps.length - 1].getBoundingClientRect();
-				var containerRect = container.getBoundingClientRect();
-				var leftOffset  = (firstRect.left + firstRect.width / 2) - containerRect.left;
-				var rightOffset = containerRect.right - (lastRect.left + lastRect.width / 2);
-				arc.style.marginLeft  = leftOffset + 'px';
-				arc.style.marginRight = rightOffset + 'px';
+				var arcParent = document.getElementById('vrg-loop-arrow');
+				if (!steps.length || !arc || !arcParent) return;
+				var firstRect  = steps[0].getBoundingClientRect();
+				var lastRect   = steps[steps.length - 1].getBoundingClientRect();
+				var parentRect = arcParent.getBoundingClientRect();
+				var leftOffset  = (firstRect.left  + firstRect.width  / 2) - parentRect.left;
+				var rightOffset = parentRect.right  - (lastRect.left  + lastRect.width  / 2);
+				arc.style.marginLeft  = Math.max(0, leftOffset)  + 'px';
+				arc.style.marginRight = Math.max(0, rightOffset) + 'px';
 			}
 			window.addEventListener('load', alignLoopArc);
 			window.addEventListener('resize', alignLoopArc);

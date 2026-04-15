@@ -392,6 +392,67 @@
 }
 
 /* ================================================================
+   Coaching Page — What It Feels Like Banner
+   ================================================================ */
+.vrg-feels-banner {
+	position: relative;
+	padding: 100px 0;
+	overflow: hidden;
+}
+.vrg-feels-banner-bg {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+.vrg-feels-banner-overlay {
+	position: absolute;
+	inset: 0;
+	background: rgba(8, 30, 58, 0.85);
+}
+.vrg-feels-banner-content {
+	position: relative;
+	z-index: 2;
+}
+.vrg-feels-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.vrg-feels-list li {
+	display: flex;
+	align-items: flex-start;
+	gap: 14px;
+	color: rgba(255, 255, 255, 0.88);
+	font-size: 1.05rem;
+	font-weight: 400;
+	line-height: 1.65;
+	padding: 14px 0;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.parallax .vrg-feels-list li {
+	font-size: 1.35rem;
+	font-weight: 700;
+}
+.vrg-feels-list li:last-child {
+	border-bottom: none;
+}
+.vrg-feels-list li i {
+	color: #6fb7f5;
+	font-size: 1rem;
+	margin-top: 4px;
+	flex-shrink: 0;
+}
+
+@media (max-width: 767px) {
+	.vrg-feels-banner {
+		padding: 70px 0;
+	}
+}
+
+/* ================================================================
    Speaking Page — Mission Banner
    ================================================================ */
 .vrg-mission-banner {
@@ -1641,16 +1702,12 @@ a.color {
 /* ================================================================
    IMPACT Quotes — all visible, active one highlighted
    ================================================================ */
-#our-process .vrg-iq-item {
-	font-size: 0.8rem;
-	line-height: 1.55;
-}
 .vrg-iq-item {
 	opacity: 0.25;
 	transition: opacity 0.5s ease;
-	font-size: 0.95rem;
-	line-height: 1.6;
-	padding: 5px 0;
+	font-size: 1.1rem;
+	line-height: 1.65;
+	padding: 6px 0;
 	border-left: 3px solid transparent;
 	padding-left: 10px;
 }
