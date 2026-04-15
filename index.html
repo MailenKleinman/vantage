@@ -400,7 +400,7 @@
 						</div>
 
 						<!-- Loop arrow (shown when Advance is active) -->
-						<div id="vrg-loop-arrow">
+						<div data-animate="fadeInUp" id="vrg-loop-arrow">
 							<div class="vrg-loop-arc"></div>
 						</div>
 
@@ -1038,6 +1038,66 @@
 				hamburger.addEventListener('click', positionMenu);
 				window.addEventListener('resize', positionMenu);
 			}
+		})();
+	</script>
+
+
+	<script>
+		(function () {
+			var LIMIT = 280;
+
+			// Build a single shared modal for this page
+			var modalEl = document.createElement('div');
+			modalEl.id = 'vrg-testimonial-modal';
+			modalEl.className = 'modal fade';
+			modalEl.setAttribute('tabindex', '-1');
+			modalEl.innerHTML = [
+				'<div class="modal-dialog modal-dialog-centered">',
+					'<div class="modal-content p-5 rounded-4 border-0 shadow">',
+						'<button type="button" class="btn-close align-self-end mb-3" data-bs-dismiss="modal" aria-label="Close"></button>',
+						'<p class="vrg-modal-text mb-4"></p>',
+						'<h4 class="vrg-modal-name h6 mb-1"></h4>',
+						'<small class="vrg-modal-role d-block mb-3"></small>',
+						'<div>',
+							'<i class="bi-star-fill text-warning"></i>',
+							'<i class="bi-star-fill text-warning"></i>',
+							'<i class="bi-star-fill text-warning"></i>',
+							'<i class="bi-star-fill text-warning"></i>',
+							'<i class="bi-star-fill text-warning"></i>',
+						'</div>',
+					'</div>',
+				'</div>'
+			].join('');
+			document.body.appendChild(modalEl);
+			var bsModal = null;
+
+			window.addEventListener('load', function () {
+				document.querySelectorAll('.fslider.testimonial .slide p.mb-4').forEach(function (p) {
+					var full = p.textContent.trim();
+					if (full.length <= LIMIT) return;
+					var short = full.slice(0, LIMIT).trimEnd();
+
+					var slide  = p.parentElement;
+					var nameEl = slide.querySelector('h4');
+					var roleEl = slide.querySelector('small');
+
+					p.innerHTML = '';
+					p.appendChild(document.createTextNode(short + '\u2026 '));
+					var more = document.createElement('a');
+					more.href = '#';
+					more.className = 'vrg-read-more';
+					more.textContent = 'Read more';
+					more.addEventListener('click', function (e) {
+						e.preventDefault();
+						modalEl.querySelector('.vrg-modal-text').textContent = full;
+						modalEl.querySelector('.vrg-modal-name').textContent = nameEl ? nameEl.textContent.trim() : '';
+						modalEl.querySelector('.vrg-modal-role').textContent = roleEl ? roleEl.textContent.trim() : '';
+						if (!bsModal) bsModal = new bootstrap.Modal(modalEl);
+						bsModal.show();
+					});
+					p.appendChild(more);
+				});
+			});
 		})();
 	</script>
 

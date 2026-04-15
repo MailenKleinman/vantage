@@ -348,7 +348,7 @@
 						</div>
 
 						<!-- Loop arrow -->
-						<div id="vrg-loop-arrow">
+						<div data-animate="fadeInUp" id="vrg-loop-arrow">
 							<div class="vrg-loop-arc"></div>
 						</div>
 
@@ -411,21 +411,9 @@
 									<div class="flexslider">
 										<div class="slider-wrap">
 											<div class="slide">
-												<p class="mb-4 font-primary">I had the opportunity to partner with Ervin
-													Watson while he worked with leaders across my organization. His
-													approach goes beyond inspiration, he creates space for leaders to
-													better understand themselves, how they show up, and how their
-													behaviors impact the people they lead. Ervin has a rare ability to
-													connect with leaders at every level and translate personality and
-													behavioral insights into practical, actionable growth. The sessions
-													he facilitated were engaging, insightful, and meaningful, and I saw
-													immediate value in how our leaders reflected, communicated, and led
-													more intentionally as a result. I would highly recommend Ervin to
-													any organization looking to develop stronger, more self-aware
-													leaders.</p>
-												<h4 class="h6 mb-1 fw-bold text-uppercase ls-1">Dexter Oliver</h4>
-												<small class="text-muted d-block mb-3">Senior Vice President of
-													Wholesale Technology, Truist Bank</small>
+												<p class="mb-4 font-primary">Keynote Speaker Ervin Watson gave us an outstanding presentation on "A Choice to Lead" for our Managers and Assistant Managers on Tuesday. This topic was fun, engaging and impactful. The staff and I enjoyed it from beginning to end. He enlightened us with his stories and pearls of wisdom. He gave us key points that we can put into practice in our kitchens. We hope that he develops more training presentations so we can invite him back to CCPS.</p>
+												<h4 class="h6 mb-1 fw-bold text-uppercase ls-1">Audrey Hamilton</h4>
+												<small class="text-muted d-block mb-3">School Nutrition Director, Clayton County GA</small>
 												<div>
 													<i class="bi-star-fill text-warning"></i>
 													<i class="bi-star-fill text-warning"></i>
@@ -435,37 +423,9 @@
 												</div>
 											</div>
 											<div class="slide">
-												<p class="mb-4 font-primary">Working with Ervin Watson has been an
-													incredibly positive experience for our leadership team. Ervin has a
-													unique way of engaging leaders that encourages honest reflection,
-													stronger relationships, and meaningful growth. His coaching
-													consistently helps leaders better understand how their behaviors
-													impact their teams and their results. Beyond the practical
-													leadership tools, Ervin’s greatest strength is his ability to
-													inspire lasting mindset and behavior change. His work has made a
-													real difference for our people.</p>
-												<h4 class="h6 mb-1 fw-bold text-uppercase ls-1">DJ Ernst</h4>
-												<small class="text-muted d-block mb-3">VP, Operations, Ernst
-													Concrete</small>
-												<div>
-													<i class="bi-star-fill text-warning"></i>
-													<i class="bi-star-fill text-warning"></i>
-													<i class="bi-star-fill text-warning"></i>
-													<i class="bi-star-fill text-warning"></i>
-													<i class="bi-star-fill text-warning"></i>
-												</div>
-											</div>
-											<div class="slide">
-												<p class="mb-4 font-primary">What has been most valuable about our
-													coaching sessions so far has been the increased self-awareness.
-													Coaching has given me practical tools to manage difficult
-													conversations, take accountability without defensiveness, and focus
-													on what I can do to improve situations rather than placing blame.
-													Personally, it has helped me grow not just as a leader, but as a
-													person, improving how I show up, how I listen, and how I respond
-													under pressure.</p>
-												<h4 class="h6 mb-1 fw-bold text-uppercase ls-1">Team Member</h4>
-												<small class="text-muted d-block mb-3">IMPACT Coaching</small>
+												<p class="mb-4 font-primary">As the director of a small rural district, I am always careful to try to find training material that my team will connect with. I knew about Ervin Watson and thought he would be a good fit for my team and boy, am I happy with my decision. To this day, my staff remembers their interaction with Ervin and the principles he taught because they were relevant to their everyday challenges, and he made them memorable using real examples and humor. Ervin took the time to engage with my staff afterward talking to them as if he was a trusted friend. He has made a definite impression on me and my team and we were blessed to have him spend time with us.</p>
+												<h4 class="h6 mb-1 fw-bold text-uppercase ls-1">Linda Waters</h4>
+												<small class="text-muted d-block mb-3">Gilmer Co. SNP Director</small>
 												<div>
 													<i class="bi-star-fill text-warning"></i>
 													<i class="bi-star-fill text-warning"></i>
@@ -615,7 +575,7 @@
 				<!-- 11. FAQs
 				============================================= -->
 				<div class="section"
-					style="position: relative; background-image: url('images/speaking/bg-questions.jpg'); background-size: cover; background-position: center; margin-top: 0 !important;">
+					style="position: relative; background-image: url('images/speaking/bg-questions.jpg'); background-size: cover; background-position: center; margin-top: 0 !important; margin-bottom: 0 !important;">
 					<div style="position: absolute; inset: 0; background: rgba(43, 93, 141, 0.803)"></div>
 					<div class="container" style="position: relative; z-index: 1;">
 						<div class="row justify-content-center mb-5">
@@ -732,6 +692,20 @@
 						</div>
 					</div>
 				</div><!-- FAQs end -->
+
+				<!-- Mission Banner
+				============================================= -->
+				<div class="vrg-mission-banner">
+					<div class="container vrg-mission-banner-content">
+						<div class="row justify-content-center">
+							<div class="col-lg-8 text-center">
+								<p class="vrg-mission-banner-quote">"I do this work because real leadership isn't about titles or applause. It's about equipping people to lead themselves and create impact that outlasts any single event."</p>
+								<p class="vrg-mission-banner-body">If your organization is ready for leaders who thrive under pressure, inspire trust, and build self-multiplying teams, let's start the conversation.</p>
+								<a href="#contact" data-scrollto="#contact" data-offset="0" class="button button-rounded text-transform-none ls-0 font-primary mt-4" style="font-size: 1.05rem; padding: 16px 38px;">Start the Conversation</a>
+							</div>
+						</div>
+					</div>
+				</div><!-- Mission Banner end -->
 
 				<!-- Photo + Bio
 				============================================= -->
@@ -886,6 +860,65 @@
 		</footer><!-- #footer end -->
 
 	</div><!-- #wrapper end -->
+
+
+	<script>
+		(function () {
+			var LIMIT = 280;
+
+			var modalEl = document.createElement('div');
+			modalEl.id = 'vrg-testimonial-modal';
+			modalEl.className = 'modal fade';
+			modalEl.setAttribute('tabindex', '-1');
+			modalEl.innerHTML = [
+				'<div class="modal-dialog modal-dialog-centered">',
+					'<div class="modal-content p-5 rounded-4 border-0 shadow">',
+						'<button type="button" class="btn-close align-self-end mb-3" data-bs-dismiss="modal" aria-label="Close"></button>',
+						'<p class="vrg-modal-text mb-4"></p>',
+						'<h4 class="vrg-modal-name h6 mb-1"></h4>',
+						'<small class="vrg-modal-role d-block mb-3"></small>',
+						'<div>',
+							'<i class="bi-star-fill text-warning"></i>',
+							'<i class="bi-star-fill text-warning"></i>',
+							'<i class="bi-star-fill text-warning"></i>',
+							'<i class="bi-star-fill text-warning"></i>',
+							'<i class="bi-star-fill text-warning"></i>',
+						'</div>',
+					'</div>',
+				'</div>'
+			].join('');
+			document.body.appendChild(modalEl);
+			var bsModal = null;
+
+			window.addEventListener('load', function () {
+				document.querySelectorAll('.fslider.testimonial .slide p.mb-4').forEach(function (p) {
+					var full = p.textContent.trim();
+					if (full.length <= LIMIT) return;
+					var short = full.slice(0, LIMIT).trimEnd();
+
+					var slide  = p.parentElement;
+					var nameEl = slide.querySelector('h4');
+					var roleEl = slide.querySelector('small');
+
+					p.innerHTML = '';
+					p.appendChild(document.createTextNode(short + '\u2026 '));
+					var more = document.createElement('a');
+					more.href = '#';
+					more.className = 'vrg-read-more';
+					more.textContent = 'Read more';
+					more.addEventListener('click', function (e) {
+						e.preventDefault();
+						modalEl.querySelector('.vrg-modal-text').textContent = full;
+						modalEl.querySelector('.vrg-modal-name').textContent = nameEl ? nameEl.textContent.trim() : '';
+						modalEl.querySelector('.vrg-modal-role').textContent = roleEl ? roleEl.textContent.trim() : '';
+						if (!bsModal) bsModal = new bootstrap.Modal(modalEl);
+						bsModal.show();
+					});
+					p.appendChild(more);
+				});
+			});
+		})();
+	</script>
 
 	<!-- Floating CTA Button -->
 	<a href="https://calendly.com/YOUR_CALENDLY_LINK" target="_blank" rel="noopener" class="vrg-float-cta"

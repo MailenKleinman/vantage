@@ -7,6 +7,50 @@
 
 
 /* ================================================================
+   Testimonial — Read More / Read Less
+   ================================================================ */
+.vrg-read-more {
+	color: #6fb7f5;
+	font-weight: 600;
+	text-decoration: none;
+	white-space: nowrap;
+}
+.vrg-read-more:hover {
+	text-decoration: underline;
+	color: #10518b;
+}
+
+/* FlexSlider sets an inline height at init — override so the card
+   always shrinks to fit the truncated content. */
+.fslider.testimonial .flexslider,
+.fslider.testimonial .slide {
+	height: auto !important;
+}
+
+/* Testimonial modal */
+#vrg-testimonial-modal .modal-content {
+	font-family: 'Manrope', sans-serif;
+}
+#vrg-testimonial-modal .vrg-modal-text {
+	font-size: 1rem;
+	line-height: 1.85;
+	color: #444;
+	font-weight: 300;
+}
+#vrg-testimonial-modal .vrg-modal-name {
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #111;
+}
+#vrg-testimonial-modal .vrg-modal-role {
+	font-size: 0.82rem;
+	color: #888;
+}
+
+
+/* ================================================================
    About Page — Hero
    ================================================================ */
 #speaking-hero,
@@ -345,6 +389,39 @@
 	color: #666;
 	line-height: 1.7;
 	margin: 0;
+}
+
+/* ================================================================
+   Speaking Page — Mission Banner
+   ================================================================ */
+.vrg-mission-banner {
+	background: linear-gradient(135deg, #10518b, #1a6db5);
+	padding: 120px 0;
+}
+.vrg-mission-banner-content {
+	position: relative;
+}
+.vrg-mission-banner-quote {
+	font-size: clamp(1.25rem, 2.8vw, 1.75rem);
+	font-weight: 700;
+	line-height: 1.5;
+	color: #fff;
+	letter-spacing: -0.5px;
+	margin-bottom: 28px;
+}
+.vrg-mission-banner-body {
+	font-size: 1.05rem;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 0.78);
+	line-height: 1.8;
+	max-width: 580px;
+	margin: 0 auto 8px;
+}
+
+@media (max-width: 767px) {
+	.vrg-mission-banner {
+		padding: 80px 0;
+	}
 }
 
 /* ================================================================
@@ -1540,12 +1617,12 @@ a.color {
    Testimonial slider — fixed minimum height (sized to longest slide)
    ================================================================ */
 .testimonial.fslider .flexslider {
-	min-height: 480px;
+	min-height: 280px;
 }
 
 @media (max-width: 575.98px) {
 	.testimonial.fslider .flexslider {
-		height: 780px !important;
+		height: 420px !important;
 		min-height: unset;
 		overflow: hidden;
 	}
