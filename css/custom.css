@@ -63,7 +63,8 @@
 	padding-top: 80px;
 }
 
-#about-hero {
+#about-hero,
+#contact-hero {
 	position: relative;
 	min-height: 90vh;
 	display: flex;
@@ -1828,7 +1829,8 @@ a.color {
 		margin-top: 2em !important;
 	}
 
-	#about-hero {
+	#about-hero,
+	#contact-hero {
 		min-height: 80vh;
 		padding-top: 0 !important;
 	}
@@ -1925,4 +1927,59 @@ a.color {
 	.vrg-float-cta-icon {
 		font-size: 1.4rem;
 	}
+}
+/* ================================================================
+   Contact Page — Process Steps
+   ================================================================ */
+.vrg-contact-step {
+	display: flex;
+	align-items: flex-start;
+	gap: 16px;
+	margin-bottom: 24px;
+}
+.vrg-contact-step-num {
+	flex-shrink: 0;
+	width: 42px;
+	height: 42px;
+	border-radius: 50%;
+	background: #6fb7f5;
+	color: #fff;
+	font-weight: 800;
+	font-size: 1.1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 2px;
+}
+.vrg-contact-step-title {
+	font-weight: 700;
+	font-size: 1rem;
+	margin-bottom: 4px;
+	color: #111;
+}
+.vrg-contact-step-desc {
+	color: #555;
+	font-weight: 300;
+	line-height: 1.75;
+	margin: 0;
+}
+.vrg-contact-expects {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.vrg-contact-expects li {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-weight: 400;
+	color: #444;
+	line-height: 1.5;
+}
+.vrg-contact-expects li i {
+	color: #6fb7f5;
+	flex-shrink: 0;
 }
