@@ -1983,3 +1983,31 @@ a.color {
 	color: #6fb7f5;
 	flex-shrink: 0;
 }
+
+/* ================================================================
+   About Page — Reaction Mode bullet list (light bg, pain points)
+   ================================================================ */
+.vrg-reaction-list {
+	list-style: none;
+	padding: 0;
+	margin: 22px 0 0;
+}
+.vrg-reaction-list li {
+	display: flex;
+	align-items: flex-start;
+	gap: 14px;
+	font-size: 1.25rem;
+	font-weight: 500;
+	color: #333;
+	line-height: 1.6;
+	margin-bottom: 18px;
+}
+.vrg-reaction-list li:last-child {
+	margin-bottom: 0;
+}
+.vrg-reaction-list li i {
+	color: #6fb7f5;
+	font-size: 1.1rem;
+	margin-top: 5px;
+	flex-shrink: 0;
+}
