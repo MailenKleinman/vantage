@@ -2106,3 +2106,8 @@ a.color {
 	margin-top: 14px;
 	font-size: 1.05rem;
 }
+
+/* Centered variant of the check list */
+.vrg-check-list.vrg-check-center li {
+	justify-content: center;
+}
