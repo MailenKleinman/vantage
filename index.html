@@ -100,6 +100,9 @@
 								<li class="menu-item"><a class="menu-link" href="contact.html">
 										<div>Contact</div>
 									</a></li>
+								<li class="menu-item vrg-nav-cta"><a class="menu-link" href="event.html">
+										<div>Live2Lead</div>
+									</a></li>
 							</ul>
 
 						</nav><!-- #primary-menu end -->
@@ -931,6 +934,54 @@
 				el.style.color = ok ? '#155724' : '#721c24';
 				el.textContent = txt;
 			}
+		})();
+	</script>
+
+	<!-- Live2Lead event promo modal (shows once per browser session on the homepage) -->
+	<div class="modal fade vrg-promo-modal" id="vrg-event-promo" tabindex="-1" aria-labelledby="vrg-promo-title"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content border-0 rounded-4 overflow-hidden shadow">
+				<button type="button" class="btn-close vrg-promo-close" data-bs-dismiss="modal"
+					aria-label="Close"></button>
+
+				<div class="vrg-promo-banner">
+					<span class="vrg-promo-vol">Vol. 02</span>
+					<span class="pt-4 vrg-promo-eyebrow">Live2Lead &middot; New Leadership Event</span>
+					<h3 class="vrg-promo-title" id="vrg-promo-title">Impact <span>Over</span> Impression</h3>
+				</div>
+
+				<div class="vrg-promo-body">
+					<p class="vrg-promo-text">A live &amp; virtual leadership training experience hosted by Ervin Watson,
+						featuring John C. Maxwell. Join the interest list and be first to know when registration opens.</p>
+					<div class="vrg-promo-meta">
+						<span><i class="bi-geo-alt-fill"></i> The Epicenter</span>
+						<span><i class="bi-calendar-event"></i> Date to be announced</span>
+					</div>
+					<a href="event.html" class="button button-large rounded-4 vrg-promo-cta">Get Early Access &amp;
+						Updates</a>
+					<button type="button" class="vrg-promo-dismiss" data-bs-dismiss="modal">Maybe later</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		(function () {
+			var KEY = 'vrgEventPromoSeen';
+			// Only on the first landing this session — skip if already shown
+			// while navigating the site. Swap sessionStorage → localStorage for "once ever".
+			try { if (sessionStorage.getItem(KEY)) return; } catch (e) {}
+
+			var el = document.getElementById('vrg-event-promo');
+			if (!el || typeof bootstrap === 'undefined' || !bootstrap.Modal) return;
+
+			window.addEventListener('load', function () {
+				setTimeout(function () {
+					try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+					bootstrap.Modal.getOrCreateInstance(el).show();
+				}, 1000);
+			});
 		})();
 	</script>
 

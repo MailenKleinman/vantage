@@ -41,7 +41,7 @@
 	.menu-container > .menu-item > .menu-link div::after {
 		opacity: 0;
 		content: '';
-		background : url('images/border.svg') no-repeat;
+		background : url('') no-repeat;
 		position: absolute;
 		bottom: -3px;
 		left: 0;
@@ -52,7 +52,7 @@
 		transition: all .3s ease;
 	}
 
-	.dark .menu-container > .menu-item > .menu-link div::after { background : url('images/border-white.svg') no-repeat; }
+	.dark .menu-container > .menu-item > .menu-link div::after { background : url('') no-repeat; }
 
 	.menu-container > .menu-item.active > .menu-link > div::after,
 	.menu-container > .menu-item:hover > .menu-link > div::after {
@@ -166,7 +166,7 @@
 
 .button-link::after {
 	content: '';
-	background : url('images/border.svg') no-repeat;
+	background : url('') no-repeat;
 	position: absolute;
 	bottom: 0px;
 	left: 0;
