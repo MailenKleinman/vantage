@@ -263,6 +263,10 @@
 									<form id="event-form" name="event-form"
 										action="https://formsubmit.co/ajax/info@vantageresourcegroupllc.com" method="POST">
 										<input type="hidden" name="_subject" value="New Live2Lead (Vol. 02) interest-list signup">
+										<input type="hidden" name="_template" value="table">
+										<input type="hidden" name="_captcha" value="false">
+										<!-- Honeypot: bots fill this, real users leave it empty -->
+										<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
 										<div class="row g-3">
 											<div class="col-md-6">
 												<label for="event-first" class="form-label fw-medium"
@@ -396,7 +400,9 @@
 						showMsg(true, "You're on the list! We'll email you program details and your registration link the moment it's live.");
 						form.reset();
 					} else {
-						showMsg(false, 'Something went wrong. Please try again or email us directly.');
+						// Surface FormSubmit's own message (e.g. the one-time
+						// "confirm your email" activation step) instead of a generic error.
+						showMsg(false, data.message || 'Something went wrong. Please try again or email us directly.');
 					}
 				})
 				.catch(function () {
