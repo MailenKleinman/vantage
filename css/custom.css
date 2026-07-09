@@ -63,6 +63,11 @@
 	padding-top: 80px;
 }
 
+/* Coaching hero — full-height like the homepage */
+#coaching-hero {
+	min-height: 90vh;
+}
+
 #about-hero,
 #contact-hero {
 	position: relative;
@@ -140,6 +145,74 @@
 	max-width: 580px;
 	margin: 0 auto;
 	line-height: 1.75;
+}
+
+/* ================================================================
+   Hero — "Watch Video" Button + Video Modal
+   ================================================================ */
+.vrg-hero-play {
+	display: inline-flex;
+	align-items: center;
+	gap: 14px;
+	margin-top: 34px;
+	padding: 8px 26px 8px 8px;
+	border: 1px solid rgba(255, 255, 255, 0.28);
+	border-radius: 50px;
+	background: rgba(255, 255, 255, 0.08);
+	color: #fff;
+	font-size: 1rem;
+	font-weight: 600;
+	letter-spacing: 0.3px;
+	cursor: pointer;
+	-webkit-backdrop-filter: blur(6px);
+	backdrop-filter: blur(6px);
+	transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.vrg-hero-play:hover {
+	background: rgba(255, 255, 255, 0.16);
+	border-color: rgba(255, 255, 255, 0.5);
+	transform: translateY(-2px);
+}
+
+.vrg-hero-play-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 46px;
+	height: 46px;
+	border-radius: 50%;
+	background: #6fb7f5;
+	color: #fff;
+	font-size: 1.4rem;
+	flex-shrink: 0;
+}
+
+.vrg-video-modal .modal-content {
+	background: transparent;
+}
+
+.vrg-video-modal-player {
+	width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 14px;
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+	background: #000;
+}
+
+.vrg-video-modal-close {
+	position: absolute;
+	top: -44px;
+	right: 0;
+	z-index: 5;
+	opacity: 1;
+}
+
+@media (max-width: 575.98px) {
+	.vrg-video-modal-close {
+		top: -40px;
+	}
 }
 
 /* ================================================================

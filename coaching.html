@@ -105,7 +105,10 @@
 		============================================= -->
 		<section id="coaching-hero" class="include-header dark">
 			<div class="vrg-about-hero-bg">
-				<img src="images/coaching/bg-coaching.jpg" alt="" class="vrg-about-hero-img">
+				<video id="vrg-hero-bg-video" class="vrg-about-hero-img" muted playsinline webkit-playsinline
+					preload="auto" poster="images/coaching/bg-coaching.jpg">
+					<source src="images/coaching/bg-video.mp4" type="video/mp4">
+				</video>
 				<div class="vrg-about-hero-overlay"></div>
 			</div>
 			<div class="container vrg-about-hero-content mobile-about">
@@ -114,6 +117,11 @@
 				<p class="vrg-about-hero-sub">You want a team that takes ownership, solves problems, and grows—on
 					their own. Discover how proactive, personalized coaching can multiply your impact and free you
 					to focus on what matters most.</p>
+				<button type="button" class="vrg-hero-play" data-bs-toggle="modal"
+					data-bs-target="#vrg-coaching-video-modal">
+					<span class="vrg-hero-play-icon"><i class="bi-play-fill"></i></span>
+					<span>Watch Video</span>
+				</button>
 			</div>
 		</section><!-- #coaching-hero end -->
 
@@ -996,6 +1004,20 @@
 		</div>
 	</div>
 
+	<!-- Hero video modal -->
+	<div id="vrg-coaching-video-modal" class="modal fade vrg-video-modal" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-lg">
+			<div class="modal-content border-0 bg-transparent">
+				<button type="button" class="btn-close btn-close-white vrg-video-modal-close"
+					data-bs-dismiss="modal" aria-label="Close"></button>
+				<video class="vrg-video-modal-player" controls playsinline preload="none"
+					poster="images/coaching/bg-coaching.jpg">
+					<source src="images/coaching/bg-video.mp4" type="video/mp4">
+				</video>
+			</div>
+		</div>
+	</div>
+
 	<!-- Floating CTA Button -->
 	<a href="https://calendly.com/ervinwatson/discovery-call" target="_blank" rel="noopener" class="vrg-float-cta"
 		aria-label="Schedule a Discovery Call">
@@ -1153,6 +1175,46 @@
 				el.style.color = ok ? '#155724' : '#721c24';
 				el.textContent = txt;
 			}
+		})();
+	</script>
+
+	<!-- Hero background video starts 5s in and loops from there (skips the blue intro) -->
+	<script>
+		(function () {
+			var v = document.getElementById('vrg-hero-bg-video');
+			if (!v) return;
+			var START_AT = 5; // seconds — skip the blue intro that competes with the text
+			function startPlayback() {
+				try { v.currentTime = START_AT; } catch (e) { }
+				v.play().catch(function () { });
+			}
+			// Loop back to START_AT instead of 0 so the intro never replays
+			v.addEventListener('timeupdate', function () {
+				if (v.duration && v.currentTime >= v.duration - 0.3) {
+					v.currentTime = START_AT;
+				}
+			});
+			v.addEventListener('ended', startPlayback);
+			if (v.readyState >= 1) startPlayback();
+			else v.addEventListener('loadedmetadata', startPlayback);
+		})();
+	</script>
+
+	<!-- Pause hero video modal when it closes -->
+	<script>
+		(function () {
+			var modal = document.getElementById('vrg-coaching-video-modal');
+			if (!modal) return;
+			var video = modal.querySelector('.vrg-video-modal-player');
+			if (!video) return;
+			modal.addEventListener('shown.bs.modal', function () {
+				video.currentTime = 0;
+				video.play().catch(function () { });
+			});
+			modal.addEventListener('hidden.bs.modal', function () {
+				video.pause();
+				video.currentTime = 0;
+			});
 		})();
 	</script>
 
