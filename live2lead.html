@@ -126,11 +126,11 @@
 						<div class="vrg-event-meta">
 							<div class="vrg-event-meta-item">
 								<span class="vrg-event-meta-label">Location</span>
-								<span class="vrg-event-meta-value"><a href="https://riversideepicenter.com/" target="_blank" rel="noopener" style="color: #6fb7f5; text-decoration: underline; text-underline-offset: 3px;">Riverside Epicenter, Mableton, GA 30168 <i class="bi-box-arrow-up-right" style="font-size: 0.75em; vertical-align: baseline;"></i></a></span>
+								<span class="vrg-event-meta-value">Impact Event Center, Atlanta, GA 30344</span>
 							</div>
 							<div class="vrg-event-meta-item">
 								<span class="vrg-event-meta-label">Date</span>
-								<span class="vrg-event-meta-value tbd">To be announced</span>
+								<span class="vrg-event-meta-value">Friday, January 29, 2027</span>
 							</div>
 							<div class="vrg-event-meta-item">
 								<span class="vrg-event-meta-label">Hosted by</span>
@@ -138,10 +138,10 @@
 							</div>
 						</div>
 
-						<a href="#register" data-offset="80" class="button button-large rounded-4 mt-4"
-							style="background-color: #6fb7f5; border-color: #6fb7f5; color: #fff;">Get Early Access &amp;
-							Updates</a>
-						<p class="vrg-event-cta-note">Takes 30 seconds &middot; no payment required today</p>
+						<a href="https://www.eventbrite.com/e/live2lead-2027-impact-over-impression-tickets-2003079997193?aff=oddtdtcreator&amp;keep_tld=true"
+							target="_blank" rel="noopener" class="button button-large rounded-4 mt-4"
+							style="background-color: #6fb7f5; border-color: #6fb7f5; color: #fff;">Get Early Bird
+							Tickets</a>
 					</div>
 				</div>
 			</div>
@@ -247,13 +247,11 @@
 
 						<div class="row justify-content-center">
 							<div class="col-lg-8 text-center" data-animate="fadeInUp">
-								<p class="vrg-about-label" style="color: #9fd0ff;">Reserve Your Spot on the List</p>
-								<h2 class="text-transform-none" style="color: #fff; letter-spacing: -1px;">Be the first to
-									know when registration opens.</h2>
-								<p style="color: rgba(255,255,255,0.82); max-width: 620px; margin: 14px auto 0; font-weight: 300; line-height: 1.8;">We're
-									finalizing the date. Drop your info below and we'll send you program details, pricing,
-									and your registration link the moment it's live &mdash; before we announce it anywhere
-									else.</p>
+								<h2 class="text-transform-none fw-bold" style="color: #fff; letter-spacing: -1px;">Bring your
+									team to Live2Lead</h2>
+								<p style="color: rgba(255,255,255,0.82); max-width: 620px; margin: 14px auto 0; font-weight: 300; line-height: 1.8;">Make
+									LIVE2LEAD a team experience. Complete the form below, and a member of our team will
+									follow up with everything you need to get your group registered.</p>
 							</div>
 						</div>
 
@@ -262,7 +260,7 @@
 								<div class="vrg-event-form-card">
 									<form id="event-form" name="event-form"
 										action="https://formsubmit.co/ajax/info@vantageresourcegroupllc.com" method="POST">
-										<input type="hidden" name="_subject" value="New Live2Lead (Vol. 02) interest-list signup">
+										<input type="hidden" name="_subject" value="New Live2Lead (Vol. 02) team registration request">
 										<input type="hidden" name="_template" value="table">
 										<input type="hidden" name="_captcha" value="false">
 										<!-- Honeypot: bots fill this, real users leave it empty -->
@@ -307,15 +305,19 @@
 													placeholder="e.g. Dothan City Schools" required>
 											</div>
 											<div class="col-12">
+												<label for="event-participants" class="form-label fw-medium"
+													style="font-size: 14px;">Number of Participants</label>
+												<input type="number" id="event-participants" name="Number of Participants"
+													class="form-control" placeholder="e.g. 10" min="1" step="1"
+													inputmode="numeric" required>
+											</div>
+											<div class="col-12">
 												<button type="submit"
 													class="button button-rounded text-transform-none ls-0 font-primary w-100"
-													style="background-color: #6fb7f5; border-color: #6fb7f5; color: #fff;">Notify
-													Me When Registration Opens</button>
+													style="background-color: #6fb7f5; border-color: #6fb7f5; color: #fff;">Register
+													My Team</button>
 											</div>
 										</div>
-										<p class="vrg-event-disclaimer">This is not a paid or confirmed registration. You're
-											simply joining the interest list to receive event details and your
-											registration link once available.</p>
 									</form>
 								</div>
 							</div>
@@ -352,9 +354,10 @@
 	</div><!-- #wrapper end -->
 
 	<!-- Floating CTA Button -->
-	<a href="#register" data-offset="80" class="vrg-float-cta" aria-label="Get Early Access to Live2Lead">
-		<span class="vrg-float-cta-icon"><i class="bi-bell-fill"></i></span>
-		<span class="vrg-float-cta-text">Get Early Access</span>
+	<a href="https://www.eventbrite.com/e/live2lead-2027-impact-over-impression-tickets-2003079997193?aff=oddtdtcreator&amp;keep_tld=true"
+		target="_blank" rel="noopener" class="vrg-float-cta" aria-label="Get Early Bird Tickets for Live2Lead">
+		<span class="vrg-float-cta-icon"><i class="bi-ticket-perforated-fill"></i></span>
+		<span class="vrg-float-cta-text">Get Early Bird Tickets</span>
 	</a>
 
 	<!-- JavaScripts
@@ -397,7 +400,7 @@
 				.then(function (r) { return r.json(); })
 				.then(function (data) {
 					if (data.success === 'true' || data.success === true) {
-						showMsg(true, "You're on the list! We'll email you program details and your registration link the moment it's live.");
+						showMsg(true, "Thanks! A member of our team will follow up with everything you need to get your group registered.");
 						form.reset();
 					} else {
 						// Surface FormSubmit's own message (e.g. the one-time
@@ -422,23 +425,6 @@
 				el.style.color = ok ? '#155724' : '#721c24';
 				el.textContent = txt;
 			}
-		})();
-	</script>
-
-	<!-- Smooth-scroll the "Get Early Access" CTAs down to the form -->
-	<script>
-		(function () {
-			var target = document.getElementById('register');
-			if (!target) return;
-			var links = document.querySelectorAll('a[href="#register"]');
-			Array.prototype.forEach.call(links, function (link) {
-				link.addEventListener('click', function (e) {
-					e.preventDefault();
-					var offset = parseInt(link.getAttribute('data-offset'), 10) || 0;
-					var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-					window.scrollTo({ top: top, behavior: 'smooth' });
-				});
-			});
 		})();
 	</script>
 
